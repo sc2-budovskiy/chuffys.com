@@ -45,6 +45,12 @@
     border: 1px solid #cccccd;
     border-radius: 10px;
     padding:20px 5px;
+    cursor:pointer;
+}
+
+.sc-package .sc-amount-label:checked {
+    background-color: #f6fff7;
+    border: 1px solid #41a842;
 }
 
 .sc-package .product-form__input.product-form__input--amount input[type=radio] {
