@@ -41,7 +41,7 @@
 .sc-package .sc-package__amount label {
     display:flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
     border: 1px solid #cccccd;
     border-radius: 10px;
     padding:20px 15px;
