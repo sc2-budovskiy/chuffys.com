@@ -38,7 +38,7 @@
     color: rgb(18, 18, 18);
 }
 
-.sc-package .sc-amount-label {
+.sc-package .sc-package__amount label {
     display:flex;
     align-items: center;
     gap: 6px;
@@ -48,10 +48,10 @@
     cursor:pointer;
 }
 
-.sc-package .sc-amount-label:checked {
+.sc-package .sc-package__amount label:has(input:checked) {
     background-color: #f6fff7;
     border: 1px solid #41a842;
-}
+} 
 
 .sc-package .product-form__input.product-form__input--amount input[type=radio] {
     position: unset;
