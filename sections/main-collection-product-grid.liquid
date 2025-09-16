@@ -153,8 +153,8 @@
                     assign lazy_load = true
                   endif
                 %}
-                {% unless product.tags contains 'collection-hidden' %}
-                  <li class="sc-test-main-16092025 grid__item animate-item animate-item--child" style='--index: {{ forloop.index0 }};'>
+                {% unless product.tags contains 'collection-hidden' or product.title contains '(Copy)' %}
+                  <li class="sc-test-main-16092025_2 grid__item animate-item animate-item--child" style='--index: {{ forloop.index0 }};'>
                     {% render 'card-product',
                       card_product: product,
                       media_aspect_ratio: section.settings.image_ratio,

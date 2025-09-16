@@ -223,7 +223,7 @@
                   <li class="sc-grid-search-16092025 grid__item{% if hidden %} hidden{% endif %}">
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-                        {% unless hidden %}
+                        {% unless hidden or item.title contains '(Copy)' %}
                           {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
                           {% render 'card-product',
                             card_product: item,
