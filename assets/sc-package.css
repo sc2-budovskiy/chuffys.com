@@ -95,5 +95,6 @@
 
 .sc-package .product-form__input.product-form__input--amount {
     width:100%;
+    max-width: unset;
 }
 
