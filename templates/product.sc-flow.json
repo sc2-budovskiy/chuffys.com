@@ -196,6 +196,10 @@
             "margin_bottom": 15
           }
         },
+        "loop_subscriptions_loop_widget_YMMtcH": {
+          "type": "shopify://apps/loop-subscriptions/blocks/loop_widget/267a7c64-5cb3-4552-b817-5485165f0a0b",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -324,6 +328,7 @@
         "icon_with_text_3feDpK",
         "emoji_benefits_XGpPAB",
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1",
+        "loop_subscriptions_loop_widget_YMMtcH",
         "buy_buttons",
         "e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5",
         "description",
