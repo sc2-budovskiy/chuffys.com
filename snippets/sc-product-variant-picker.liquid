@@ -117,7 +117,7 @@
                   </div>
                 </div>
               {% when 'amount' %}
-                {% render 'product-variant-options', product: product, option: option, block: block, type: 'pills' %}
+                {% render 'sc-product-variant-options', product: product, option: option, block: block, type: 'amount' %}
               {% else %}
                 {% render 'product-variant-options', product: product, option: option, block: block, type: 'pills' %}
             {% endcase %}
