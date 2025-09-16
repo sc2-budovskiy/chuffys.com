@@ -319,6 +319,10 @@
             "margin_top": 24,
             "margin_bottom": 0
           }
+        },
+        "loop_subscriptions_loop_widget_XR8Jxy": {
+          "type": "shopify://apps/loop-subscriptions/blocks/loop_widget/267a7c64-5cb3-4552-b817-5485165f0a0b",
+          "settings": {}
         }
       },
       "block_order": [
@@ -334,7 +338,8 @@
         "description",
         "reviews_8UgFbe",
         "collapsible_tab_nKDjHK",
-        "de158e68-5d0d-4819-a625-e2dabdff87d1"
+        "de158e68-5d0d-4819-a625-e2dabdff87d1",
+        "loop_subscriptions_loop_widget_XR8Jxy"
       ],
       "custom_css": [],
       "settings": {
