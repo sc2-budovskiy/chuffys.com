@@ -207,10 +207,10 @@
       {% assign low_option_name = option.name | downcase %}
       {% assign val_arr = value | escape | split: ":" %}
       {% assign chews = val_arr[1] | abs %}
-      {% assign price_per_item = currentVariant.price | divided_by: chews %}
+      {% assign price_per_item = currentVariant.price | divided_by: chews | money %}
 
       <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-        <div class="sc-package__input-block">
+        <div class="sc-test-v01 sc-package__input-block">
           <input
             type="radio"
             id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -218,7 +218,7 @@
             value="{{ value | escape }}"
             data-chews="{{ chews }}"
             data-currentVariant="{{ currentVariant.price }}"
-            data-price_per_item="{{ price_per_item | money }}"
+            data-price_per_item="{{ price_per_item }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
               checked
