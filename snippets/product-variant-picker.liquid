@@ -10,6 +10,7 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 
+<!-- snippets/product-variant-picker.liquid -->
 {%- unless product.has_only_default_variant -%}
   {% liquid
     assign types_string = block.settings.picker_types | downcase
@@ -128,6 +129,7 @@
     </script>
   </variant-selects>
 {%- endunless -%}
+<!-- snippets/product-variant-picker.liquid END -->
 
 <noscript
   class="product-form__noscript-wrapper-{{ section.id }}"
