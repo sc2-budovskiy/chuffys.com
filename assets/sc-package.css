@@ -6,7 +6,8 @@
 }
 
 .sc-package__wrapper {
-    border:1px solid #000;
+    border:1px solid rgba(0,0,0,0.5);
+    border-radius:8px;
     padding:10px;
     margin-bottom:20px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
