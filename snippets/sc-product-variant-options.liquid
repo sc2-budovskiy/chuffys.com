@@ -207,9 +207,7 @@
       {% assign low_option_name = option.name | downcase %}
       {% assign val_arr = value | escape | split: ":" %}
       {% assign chews = val_arr[1] | abs %}
-      {%- liquid 
-        assign price_per_item = currentVariant.price | divided_by: chews | money
-      -%}
+      {% assign price_per_item = currentVariant.price | divided_by: chews %}
 
       <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         <div class="sc-package__input-block">
@@ -220,7 +218,7 @@
             value="{{ value | escape }}"
             data-chews="{{ chews }}"
             data-currentVariant="{{ currentVariant.price }}"
-            data-price_per_item="{{ price_per_item }}"
+            data-price_per_item="{{ price_per_item | money }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
               checked
