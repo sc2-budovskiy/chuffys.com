@@ -1,3 +1,4 @@
+<!-- sections/main-product.liquid v0.1 -->
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
@@ -691,7 +692,6 @@
                 has_filtering: has_filtering
               %}
             {%- when 'buy_buttons' -%}
-              <!-- Buy buttons sections\main-product.liquid -->
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -703,7 +703,6 @@
                   quantity_selector_html: quantity_selector_html,
                   quantity_atc_append_heights: quantity_atc_append_heights
                 -%}
-              <!-- Buy buttons sections\main-product.liquid END -->
             {%- when 'reviews' -%}
               {%- render 'reviews', block: block -%}
             {%- when 'rating' -%}
@@ -1187,6 +1186,8 @@
     }
   </script>
 </section>
+
+<!-- sections/main-product.liquid END -->
 
 {% schema %}
 {

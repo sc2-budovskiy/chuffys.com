@@ -48,6 +48,7 @@
   >
 {%- endif -%}
 
+<!-- sections/featured-product.liquid -->
 <section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %} content-for-grouping {{ section.settings.visibility }}">
   {% if section.settings.display_id %}
     <copy-button class="section-id-btn button" data-content="#shopify-section-{{ section.id }}" data-success="false">
@@ -450,7 +451,6 @@
                   sizing_chart_html: sizing_chart_html
                 %}
               {%- when 'buy_buttons' -%}
-                <!-- buy_buttons in featured-product.liquid v0.1 -->
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
@@ -461,7 +461,6 @@
                     quantity_selector_html: quantity_selector_html,
                     quantity_atc_append_heights: quantity_atc_append_heights
                   -%}
-                <!-- buy_buttons in featured-product.liquid END -->
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'payment_badges' -%}
@@ -795,6 +794,7 @@
     </modal-dialog>
   {%- endfor -%}                 
 </section>
+<!-- sections/featured-product.liquid END -->
 
 {%- if section.settings.image_zoom == 'hover' -%}
   <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>

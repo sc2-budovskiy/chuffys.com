@@ -153,8 +153,9 @@
                     assign lazy_load = true
                   endif
                 %}
+                {% comment %} SC changes 16.09.2025 {% endcomment %}
                 {% unless product.tags contains 'collection-hidden' or product.title contains '(Copy)' %}
-                  <li class="sc-test-main-16092025_2 grid__item animate-item animate-item--child" style='--index: {{ forloop.index0 }};'>
+                  <li class="grid__item animate-item animate-item--child" style='--index: {{ forloop.index0 }};'>
                     {% render 'card-product',
                       card_product: product,
                       media_aspect_ratio: section.settings.image_ratio,
