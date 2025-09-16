@@ -42,10 +42,9 @@
     display:flex;
     align-items: center;
     gap: 6px;
-
     border: 1px solid #cccccd;
     border-radius: 10px;
-    padding:10px 5px;
+    padding:20px 5px;
 }
 
 .sc-package .product-form__input.product-form__input--amount input[type=radio] {
@@ -57,5 +56,5 @@
 .sc-package .sc-package__amount {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
 }
