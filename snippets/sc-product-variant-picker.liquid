@@ -45,7 +45,7 @@
       {%- for option in product.options_with_values -%}
         {% liquid
           assign type = types_array[forloop.index0] | strip | replace: ' ', '-'
-          if type != 'dropdown' and type != 'swatches' and type != 'quantity-breaks' and type != 'hidden'
+          if type != 'dropdown' and type != 'amount' and type != 'swatches' and type != 'quantity-breaks' and type != 'hidden'
             assign type = 'pills'
           endif
         %}
