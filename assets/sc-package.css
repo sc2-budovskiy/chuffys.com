@@ -47,6 +47,33 @@
     padding:20px 15px 20px 10px;
     cursor:pointer;
     width:100%;
+
+    position: relative;
+}
+
+.sc-amount__popular {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: #b9d4ff;
+    color: #000;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    transform: translateY(-50%);
+}
+.sc-amount__recommended {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: #ffd678;
+    color: #000;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    transform: translateY(-50%);
 }
 
 .sc-package .sc-package__amount label:has(input:checked) {

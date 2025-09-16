@@ -210,9 +210,18 @@
       {% assign price_per_item = currentVariant.price | divided_by: chews | money %}
       {% assign price_per_item_string = price_per_item | append: ' / chew' %}
       {% assign percentage_saved = currentVariant.compare_at_price | minus: currentVariant.price | times: 100.0 | divided_by: currentVariant.compare_at_price | floor | append: '%' %}
+      
+      {% assign popular = currentVariant.metafields.custom.popular.value %}
+      {% assign recommended = currentVariant.metafields.custom.recommended.value %}
 
 
       <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+        {% if popular != blank %}
+          <div class="sc-amount__popular">{{ popular }}</div>
+        {% elsif recommended != blank %}
+          <div class="sc-amount__recommended">{{ recommended }}</div>
+        {% endif %}
+
         <div class="sc-test-v01 sc-package__input-block">
           <input
             type="radio"
