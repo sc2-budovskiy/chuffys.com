@@ -323,6 +323,10 @@
         "loop_subscriptions_loop_widget_XR8Jxy": {
           "type": "shopify://apps/loop-subscriptions/blocks/loop_widget/267a7c64-5cb3-4552-b817-5485165f0a0b",
           "settings": {}
+        },
+        "loop_subscriptions_loop_widget_zxQHNY": {
+          "type": "shopify://apps/loop-subscriptions/blocks/loop_widget/267a7c64-5cb3-4552-b817-5485165f0a0b",
+          "settings": {}
         }
       },
       "block_order": [
@@ -339,7 +343,8 @@
         "reviews_8UgFbe",
         "collapsible_tab_nKDjHK",
         "de158e68-5d0d-4819-a625-e2dabdff87d1",
-        "loop_subscriptions_loop_widget_XR8Jxy"
+        "loop_subscriptions_loop_widget_XR8Jxy",
+        "loop_subscriptions_loop_widget_zxQHNY"
       ],
       "custom_css": [],
       "settings": {
