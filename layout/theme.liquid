@@ -411,6 +411,8 @@
       >
     {%- endif -%}
 
+    {{ 'sc-package.css' | asset_url | stylesheet_tag: preload: true }}
+
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
