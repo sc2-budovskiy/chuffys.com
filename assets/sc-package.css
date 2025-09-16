@@ -37,3 +37,15 @@
 .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]:checked+label span {
     color: rgb(18, 18, 18);
 }
+
+.sc-package .sc-amount-label {
+    display:flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sc-package .product-form__input input[type=radio] {
+    position: unset;
+    height: 20px;
+    width: 20px;
+}
