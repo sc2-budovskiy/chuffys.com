@@ -204,7 +204,7 @@
         <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
       </label>
     {%- when 'amount' -%}
-      <label class="accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+      <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         <div class="sc-package__input-block">
           <input
             type="radio"
