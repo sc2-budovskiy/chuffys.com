@@ -208,6 +208,7 @@
       {% assign val_arr = value | escape | split: ":" %}
       {% assign chews = val_arr[1] | abs %}
       {% assign price_per_item = currentVariant.price | divided_by: chews | money %}
+      {% assign price_per_item_string = price_per_item | ' / chew' %}
 
       <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         <div class="sc-test-v01 sc-package__input-block">
@@ -227,8 +228,18 @@
           />
         </div>  
         <div class="sc-package__value-block">
-          {{ value -}}
-          <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+          <div class="sc-package__value-col1">
+            <div class="sc-package__value-row1">
+              {{ value -}}
+              <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>  
+            </div>
+            <div class="sc-package__value-row2">
+              {{ price_per_item_string }}
+            </div>
+          </div>
+          <div class="sc-package__value-col2">
+            <span class="sc-package__value-save">Save 20%</span>
+          </div>
         </div>
       </label>
     {%- when 'dropdown' -%}

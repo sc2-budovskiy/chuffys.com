@@ -64,3 +64,21 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.sc-package .sc-package__amount label .sc-package__value-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-save {
+    font-weight: 600;
+    color:#fff;
+    background:#022b78;
+}
