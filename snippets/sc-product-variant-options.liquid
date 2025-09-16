@@ -208,7 +208,7 @@
       {% assign val_arr = value | escape | split: ":" %}
       {% assign chews = val_arr[1] | abs %}
       {% assign price_per_item = currentVariant.price | divided_by: chews | money %}
-      {% assign price_per_item_string = price_per_item | ' / chew' %}
+      {% assign price_per_item_string = price_per_item | append: ' / chew' %}
 
       <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         <div class="sc-test-v01 sc-package__input-block">
