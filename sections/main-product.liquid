@@ -691,17 +691,19 @@
                 has_filtering: has_filtering
               %}
             {%- when 'buy_buttons' -%}
-              {%- render 'buy-buttons',
-                 block: block,
-                 product: product,
-                 product_form_id: product_form_id,
-                 section_id: section.id,
-                 show_pickup_availability: true,
-                 main_product: true,
-                 quantity_atc_append: quantity_atc_append,
-                 quantity_selector_html: quantity_selector_html,
-                 quantity_atc_append_heights: quantity_atc_append_heights
-              -%}
+              <!-- Buy buttons sections\main-product.liquid -->
+                {%- render 'buy-buttons',
+                  block: block,
+                  product: product,
+                  product_form_id: product_form_id,
+                  section_id: section.id,
+                  show_pickup_availability: true,
+                  main_product: true,
+                  quantity_atc_append: quantity_atc_append,
+                  quantity_selector_html: quantity_selector_html,
+                  quantity_atc_append_heights: quantity_atc_append_heights
+                -%}
+              <!-- Buy buttons sections\main-product.liquid END -->
             {%- when 'reviews' -%}
               {%- render 'reviews', block: block -%}
             {%- when 'rating' -%}

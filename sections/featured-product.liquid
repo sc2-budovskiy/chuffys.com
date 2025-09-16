@@ -451,16 +451,16 @@
                 %}
               {%- when 'buy_buttons' -%}
                 <!-- buy_buttons in featured-product.liquid v0.1 -->
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  main_product: false,
-                  quantity_atc_append: quantity_atc_append,
-                  quantity_selector_html: quantity_selector_html,
-                  quantity_atc_append_heights: quantity_atc_append_heights
-                -%}
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    main_product: false,
+                    quantity_atc_append: quantity_atc_append,
+                    quantity_selector_html: quantity_selector_html,
+                    quantity_atc_append_heights: quantity_atc_append_heights
+                  -%}
                 <!-- buy_buttons in featured-product.liquid END -->
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
