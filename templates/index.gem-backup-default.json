@@ -1,0 +1,650 @@
+{
+  "sections": {
+    "cfca4268-6358-426c-98ab-d292aeef11e5": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21507361505575__cfca4268-6358-426c-98ab-d292aeef11e5-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ChatGPT_Image_Aug_6_2025_04_50_55_AM.png",
+            "image_overlay_opacity": 0,
+            "heading": "USA's Number #1 Dog Sleep Supplement",
+            "title_highlight_color": "#6d388b",
+            "heading_size": "h1",
+            "subheading": "Transform Your Dog’s Nights: Deep, Restful Sleep Starts with Chuffys",
+            "button_label": "Shop Now",
+            "link": "shopify:\/\/products\/dreamy-pup-chews",
+            "button_style_secondary": false,
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "color_scheme": "background-1",
+            "transparent_container_color": "white",
+            "text_alignment_mobile": "center",
+            "custom_colors_background": "#ffffff",
+            "custom_gradient_background": "",
+            "custom_colors_text": "#2e2a39",
+            "custom_colors_solid_button_background": "#dd1d1d",
+            "custom_colors_solid_button_text": "#ffffff",
+            "custom_colors_outline_button": "#dd1d1d"
+          }
+        }
+      },
+      "block_order": [
+        "template--21507361505575__cfca4268-6358-426c-98ab-d292aeef11e5-slide-1"
+      ],
+      "settings": {
+        "visibility": "always-display",
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "desktop_pagination_position": "over",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "mobile_pagination_position": "under",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "section_divider_BwcUVi": {
+      "type": "section-divider",
+      "name": "Section divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "diagonal_1",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#dd1d1d",
+        "background_color": "background-1",
+        "custom_background_color": "#FFFFFF",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_w3YJKU": {
+      "type": "featured-product",
+      "blocks": {
+        "title_daBBmq": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 15
+          }
+        },
+        "price_pa4yC6": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "displayed_badge": "sale",
+            "icon_scale": 140,
+            "custom_badge_text": "[icon_1] SPECIAL OFFER",
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "variant_picker_GFxXCL": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_types": "pills, pills, pills",
+            "custom_labels": "",
+            "disable_prepend": false,
+            "swatches_size": "medium",
+            "swatches_border_radius": 100,
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "#000000, #FFFFFF",
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "none",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_vertical_prices_layout": "vertical",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "Variant 1 caption, Variant 2 caption, Variant 3 caption",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "quantity_selector_eeEtFd": {
+          "type": "quantity_selector",
+          "settings": {
+            "full_width_classic": false,
+            "atc_append": "none",
+            "atc_append_heights": "stretch-quantity",
+            "enable_quantity_discounts": false,
+            "style": "normal",
+            "headline": "BUNDLE & SAVE",
+            "preselected": "option_1",
+            "display_selected_indicator": true,
+            "border_radius": 10,
+            "border_width": 2,
+            "color_scheme": "accent-1",
+            "enable_variant_selectors": true,
+            "enable_variant_selectors_on_quantity_of_1": false,
+            "update_prices": false,
+            "skip_unavailable": false,
+            "full_width_pickers": false,
+            "hide_pickers_overlay": true,
+            "pickers_label": "",
+            "image_width": 70,
+            "space_images": true,
+            "vertical_images_position": "top",
+            "vertical_prices_layout": "vertical",
+            "option_1_quantity": 1,
+            "option_1_badge": "",
+            "option_1_badge_style": "1",
+            "option_1_badge_color": "accent-1",
+            "option_1_label": "Buy [quantity]",
+            "option_1_benefit": "",
+            "option_1_benefit_position": "top",
+            "option_1_benefit_style": "outlined",
+            "option_1_benefit_color": "accent-1",
+            "option_1_caption": "You save [amount_saved]",
+            "option_1_percentage_off_text": "0",
+            "option_1_fixed_amount_off": "0",
+            "option_1_price_text": "[price]",
+            "option_1_compare_price": "compare_price",
+            "option_1_compare_price_text": "[compare_price]",
+            "option_2_quantity": 2,
+            "option_2_badge": "",
+            "option_2_badge_style": "1",
+            "option_2_badge_color": "accent-1",
+            "option_2_label": "Buy [quantity]",
+            "option_2_benefit": "",
+            "option_2_benefit_position": "top",
+            "option_2_benefit_style": "outlined",
+            "option_2_benefit_color": "accent-1",
+            "option_2_caption": "You save [amount_saved]",
+            "option_2_percentage_off_text": "0",
+            "option_2_fixed_amount_off": "0",
+            "option_2_price_text": "[price]",
+            "option_2_compare_price": "compare_price",
+            "option_2_compare_price_text": "[compare_price]",
+            "option_3_quantity": 3,
+            "option_3_badge": "",
+            "option_3_badge_style": "1",
+            "option_3_badge_color": "accent-1",
+            "option_3_label": "Buy [quantity]",
+            "option_3_benefit": "",
+            "option_3_benefit_position": "top",
+            "option_3_benefit_style": "outlined",
+            "option_3_benefit_color": "accent-1",
+            "option_3_caption": "You save [amount_saved]",
+            "option_3_percentage_off_text": "0",
+            "option_3_fixed_amount_off": "0",
+            "option_3_price_text": "[price]",
+            "option_3_compare_price": "compare_price",
+            "option_3_compare_price_text": "[compare_price]",
+            "option_4_quantity": 4,
+            "option_4_badge": "",
+            "option_4_badge_style": "1",
+            "option_4_badge_color": "accent-1",
+            "option_4_label": "Buy [quantity]",
+            "option_4_benefit": "",
+            "option_4_benefit_position": "top",
+            "option_4_benefit_style": "outlined",
+            "option_4_benefit_color": "accent-1",
+            "option_4_caption": "You save [amount_saved]",
+            "option_4_percentage_off_text": "0",
+            "option_4_fixed_amount_off": "0",
+            "option_4_price_text": "[price]",
+            "option_4_compare_price": "compare_price",
+            "option_4_compare_price_text": "[compare_price]",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "buy_buttons_WN9yfh": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "display_price": false,
+            "enable_custom_color": false,
+            "custom_color": "#dd1d1d",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "Buy It Now",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#dd1d1d",
+            "margin_top": 24,
+            "margin_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "title_daBBmq",
+        "price_pa4yC6",
+        "variant_picker_GFxXCL",
+        "quantity_selector_eeEtFd",
+        "buy_buttons_WN9yfh"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "product": "dreamy-pup-chews",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "mobile_media_corner_radius": 12,
+        "full_media_width": false,
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "section_divider_hLFEcm": {
+      "type": "section-divider",
+      "name": "Section divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "diagonal_1",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#dd1d1d",
+        "background_color": "background-1",
+        "custom_background_color": "#FFFFFF",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "0f1fc9e4-bc4c-4052-9747-62d1f8472caa": {
+      "type": "results",
+      "blocks": {
+        "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-1": {
+          "type": "row",
+          "settings": {
+            "percentage": 99,
+            "row_text": "<p>Saw Immediate Results the First Night<\/p>"
+          }
+        },
+        "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-2": {
+          "type": "row",
+          "settings": {
+            "percentage": 97,
+            "row_text": "<p>Noticed their Dogs Slept Through the Whole Night <\/p>"
+          }
+        },
+        "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-3": {
+          "type": "row",
+          "settings": {
+            "percentage": 95,
+            "row_text": "<p>Saw their Dogs Appeared Calmer & Less Anxious<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-1",
+        "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-2",
+        "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-3"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Results Don't Lie...",
+        "title_highlight_color": "#6d388b",
+        "heading_size": "h1",
+        "text": "<p>Based on an independent survey conducted in 2024 (n=200)<\/p>",
+        "video_muted_autoplay": true,
+        "color_scheme": "background-1",
+        "layout": "results_second",
+        "results_headline": "",
+        "results_title_highlight_color": "#6d388b",
+        "results_headline_size": "h2",
+        "results_text": "",
+        "results_headline_alignment": "left",
+        "caption": "",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_accent": "#dd1d1d",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d"
+      }
+    },
+    "ss_glow_testimonial_yVTGnm": {
+      "type": "ss-glow-testimonial",
+      "blocks": {
+        "image_RUEN8C": {
+          "type": "Image",
+          "settings": {
+            "review_text": "She’d scratch the front door for hours. One chew and she sleeps through like a dream. I’m shocked",
+            "review_rating": 5
+          }
+        },
+        "image_d6Ny6a": {
+          "type": "Image",
+          "settings": {
+            "review_text": "So impressed by how well it works",
+            "review_rating": 5
+          }
+        },
+        "image_fJejLw": {
+          "type": "Image",
+          "settings": {
+            "review_text": "Got him fixed, walked him twice a day, nothing worked. These chews did. First full night’s sleep in months.",
+            "review_rating": 5
+          }
+        },
+        "image_i6UrAi": {
+          "type": "Image",
+          "settings": {
+            "review_text": "He was crying all night, pacing, waking me up at 3am. Now? Total silence till morning. I could cry",
+            "review_rating": 5
+          }
+        },
+        "image_rbxb6F": {
+          "type": "Image",
+          "settings": {
+            "review_text": "Calms her down right away and she sleeps through the night without crying - miracle!",
+            "review_rating": 5
+          }
+        },
+        "image_f3BcYL": {
+          "type": "Image",
+          "settings": {
+            "review_text": "Our vet recommended them and they have been life changing, my senior dog used to struggle sleeping so bad",
+            "review_rating": 5
+          }
+        },
+        "image_4yRhRp": {
+          "type": "Image",
+          "settings": {
+            "review_text": "Thought it was dementia. Turns out he just wasn’t getting deep sleep. These fixed everything",
+            "review_rating": 5
+          }
+        },
+        "image_adKBpC": {
+          "type": "Image",
+          "settings": {
+            "review_text": "She’d bark at every breeze, every creak. One week on these and she’s finally calm — and quiet.",
+            "review_rating": 5
+          }
+        },
+        "image_daT9ca": {
+          "type": "Image",
+          "settings": {
+            "review_text": "I was at my wits end. Waking up every night to let him out. These chews gave us our nights back.",
+            "review_rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "image_RUEN8C",
+        "image_d6Ny6a",
+        "image_fJejLw",
+        "image_i6UrAi",
+        "image_rbxb6F",
+        "image_f3BcYL",
+        "image_4yRhRp",
+        "image_adKBpC",
+        "image_daT9ca"
+      ],
+      "name": "SS - Glow Testimonial",
+      "settings": {
+        "animation_time": 30,
+        "loop_amount": 2,
+        "header_before_gradient": "Trusted by",
+        "header_gradient": "4,500+ Happy",
+        "header": "Americans...",
+        "header_color": "#0B1128",
+        "header_font_size": 42,
+        "header_mob_font_size": 28,
+        "review_font_size": 16,
+        "review_font_color": "#0B1128",
+        "gradient_color_1": "#4222DE",
+        "gradient_color_2": "#659BFF",
+        "gradient_color_3": "#7FF6E8",
+        "blur_color": "#B8B1DC",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_divider_GzxfQU": {
+      "type": "section-divider",
+      "name": "Section divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "diagonal_1",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#dd1d1d",
+        "background_color": "background-1",
+        "custom_background_color": "#FFFFFF",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_qRFcmU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bx4JV4": {
+          "type": "heading",
+          "settings": {
+            "title": "Quality You Can Rely On...",
+            "title_highlight_color": "#6d388b",
+            "heading_size": "h1"
+          }
+        },
+        "text_Jk3t86": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You want only the best for your dog, and that includes ensuring what they take is 100% safe. <\/p><p>That’s why Dreamies is crafted with all-natural, non-toxic ingredients & is <strong>vet-approved<\/strong> for your dog’s safety. <\/p><p>Our formula is <strong>specifically designed to align with their unique biology. <\/strong>It gently calms anxiety, promotes deep sleep cycles & supports overall well-being.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_jCmeU6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/products\/dreamy-pup-chews"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bx4JV4",
+        "text_Jk3t86",
+        "button_jCmeU6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image": "shopify:\/\/shop_images\/4097cfd7-c447-44aa-968f-1de350036b08.png",
+        "video_autoplay": true,
+        "video_loop": true,
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 36,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36,
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": ""
+      }
+    },
+    "section_divider_LFfbVx": {
+      "type": "section-divider",
+      "name": "Section divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "diagonal_1",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#dd1d1d",
+        "background_color": "background-1",
+        "custom_background_color": "#FFFFFF",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "icon_bar_8XGfAW": {
+      "type": "icon-bar",
+      "blocks": {
+        "column_ehFacB": {
+          "type": "column",
+          "settings": {
+            "icon": "check_circle",
+            "filled_icon": false,
+            "title": "Free Shipping USA Wide",
+            "text": "<p><\/p><p><\/p>"
+          }
+        },
+        "column_QxLRPW": {
+          "type": "column",
+          "settings": {
+            "icon": "check_circle",
+            "filled_icon": false,
+            "title": "90-Day Money Back Guarantee",
+            "text": "<p><\/p><p><\/p>"
+          }
+        },
+        "column_xkmr7D": {
+          "type": "column",
+          "settings": {
+            "icon": "check_circle",
+            "filled_icon": false,
+            "title": "3rd Party Tested",
+            "text": "<p><\/p><p><\/p>"
+          }
+        },
+        "column_tjaY8h": {
+          "type": "column",
+          "settings": {
+            "icon": "check_circle",
+            "filled_icon": false,
+            "title": "Made from Locally Sourced Ingredients",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_ehFacB",
+        "column_QxLRPW",
+        "column_xkmr7D",
+        "column_tjaY8h"
+      ],
+      "name": "Icon Bar",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "",
+        "title_highlight_color": "#6D388B",
+        "heading_size": "h1",
+        "text": "",
+        "color_scheme": "background-1",
+        "icon_layout": "vertical",
+        "icon_size": "medium",
+        "icon_color": "accent-1",
+        "cards_color_scheme": "background-1",
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 4,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 20,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "2",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": true,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39",
+        "custom_cards_colors_background": "#F3F3F3",
+        "custom_cards_gradient_background": "",
+        "custom_cards_colors_text": "#2E2A39"
+      }
+    }
+  },
+  "order": [
+    "cfca4268-6358-426c-98ab-d292aeef11e5",
+    "section_divider_BwcUVi",
+    "featured_product_w3YJKU",
+    "section_divider_hLFEcm",
+    "0f1fc9e4-bc4c-4052-9747-62d1f8472caa",
+    "ss_glow_testimonial_yVTGnm",
+    "section_divider_GzxfQU",
+    "image_with_text_qRFcmU",
+    "section_divider_LFfbVx",
+    "icon_bar_8XGfAW"
+  ]
+}
