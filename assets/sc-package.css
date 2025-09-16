@@ -42,9 +42,13 @@
     display:flex;
     align-items: center;
     gap: 6px;
+    
+    border: 1px solid #cccccd;
+    border-radius: 10px;
+    padding:5px;
 }
 
-.sc-package .product-form__input input[type=radio] {
+.sc-package .product-form__input.product-form__input--amount input[type=radio] {
     position: unset;
     height: 20px;
     width: 20px;
