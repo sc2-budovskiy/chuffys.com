@@ -32,3 +32,7 @@
     background-color:rgb(246, 255, 247);
     border:1px solid rgb(65, 168, 66);
 }
+
+.sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]:checked+label span {
+    color: rgb(18, 18, 18);
+}
