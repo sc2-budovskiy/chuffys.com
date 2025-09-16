@@ -216,6 +216,7 @@
             name="{{ option.name }}{{ custom_name_identifier }}"
             value="{{ value | escape }}"
             data-chews="{{ chews }}"
+            data-currentVariant="{{ currentVariant.price }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
               checked
