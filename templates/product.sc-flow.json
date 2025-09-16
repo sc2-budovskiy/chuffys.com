@@ -162,8 +162,8 @@
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1": {
           "type": "variant_picker",
           "settings": {
-            "picker_types": "pills, dropdown, dropdown",
-            "custom_labels": "[name] - [selected]",
+            "picker_types": "pills, amount, dropdown",
+            "custom_labels": "[name]:",
             "skip_unavailable": false,
             "swatches_size": "medium",
             "swatches_custom_colors": "disabled",
