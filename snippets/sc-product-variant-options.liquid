@@ -204,6 +204,10 @@
         <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
       </label>
     {%- when 'amount' -%}
+      {% assign low_option_name = option.name | downcase %}
+      {% assign val_arr = value | escape | split: ":" %}
+      {% assign chews = val_arr[1] | abs %}
+
       <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         <div class="sc-package__input-block">
           <input
@@ -211,6 +215,7 @@
             id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
             name="{{ option.name }}{{ custom_name_identifier }}"
             value="{{ value | escape }}"
+            data-chews="{{ chews }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
               checked
