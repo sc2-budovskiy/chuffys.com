@@ -83,6 +83,7 @@
     color:#fff;
     background:#022b78;
     padding:8px 6px;
+    border-radius:6px;
 }
 
 .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col2 {
