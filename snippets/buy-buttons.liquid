@@ -87,8 +87,8 @@
         <input
           type="hidden"
           name="id"
-          value="46753642545410"
-          class="sc-test-v555 product-variant-id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          class="sc-test-v666 product-variant-id"
           {% if block.settings.skip_cart %}
             data-skip-cart="true"
           {% endif %}
