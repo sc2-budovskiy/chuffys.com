@@ -16,7 +16,7 @@
 {%- endstyle -%}
 
 {%- liquid
-  assign product = section.settings.product
+  {% comment %} assign product = section.settings.product {% endcomment %}
 
   if section.settings.media_size == 'large'
     assign media_width = 0.65
@@ -450,6 +450,7 @@
                   sizing_chart_html: sizing_chart_html
                 %}
               {%- when 'buy_buttons' -%}
+                <!-- buy_buttons in featured-product.liquid v0.1 -->
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -460,6 +461,7 @@
                   quantity_selector_html: quantity_selector_html,
                   quantity_atc_append_heights: quantity_atc_append_heights
                 -%}
+                <!-- buy_buttons in featured-product.liquid END -->
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'payment_badges' -%}
