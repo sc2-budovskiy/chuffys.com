@@ -98,3 +98,13 @@
     max-width: unset;
 }
 
+.sc-package .sc-package__value-row1 {
+    font-weight: 600;
+    color: #000;
+}
+
+.sc-package__value-row2 {
+    font-size: 14px;
+    color: #555;
+}
+
