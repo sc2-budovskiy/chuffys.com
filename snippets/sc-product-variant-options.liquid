@@ -245,7 +245,7 @@
             name="{{ option.name }}{{ custom_name_identifier }}"
             value="{{ value | escape }}"
             data-chews="{{ chews }}"
-            data-currentVariant="{{ currentVariant.id }}"
+            data-variant_id="{{ currentVariant.id }}"
             data-section_id="{{ section.id }}"
             data-product_handle="{{ product.handle }}"
             data-benefits="{{ benefits }}"
@@ -430,7 +430,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.777 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.888 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     const currentBenefits = document.getElementById('sc-benefits');
     const radios = document.querySelectorAll('input[name="Amount"]');
@@ -439,10 +439,10 @@
         console.log(`%c radio.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
 
         const selected = event.target;
-        const currentVariantId = selected.dataset.currentVariant;
+        const variant_id = selected.dataset.variant_id;
         const benefits_html = selected.dataset.benefits_html;
 
-        console.log('currentVariantId', currentVariantId);
+        console.log('variant_id', variant_id);
         console.log('benefits_html', benefits_html);
 
         if(currentBenefits){
