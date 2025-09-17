@@ -500,7 +500,7 @@
           // Subscriptions Loop is shown
           const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
           const selectedOption = loop_widget_sp_selector.options[loop_widget_sp_selector.selectedIndex];
-          const selectedText = selectedOption.text.toLowrerCase();
+          const selectedText = selectedOption.text;
 
           console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
           console.dir(selectedText);
