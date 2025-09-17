@@ -229,6 +229,14 @@
           {% assign final_benefits = benefits %}
         {% endif %}
 
+        {%- capture benefits_html -%}
+          <ul id="sc-benefits-list" class="sc-benefits__list">
+            {%- for benefit in final_benefits -%}
+              <li class="sc-benefits__item">{{ benefit }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endcapture -%}
+
         {% comment %} {% assign benefits = '' %}
         {% for benefit in currentVariant.metafields.custom.benefits.value %}
           {% if forloop.last %}
@@ -250,6 +258,7 @@
             data-section_id="{{ section.id }}"
             data-product_handle="{{ product.handle }}"
             data-benefits="{{ benefits }}"
+            data-benefits_html="{{ benefits_html | strip_newlines | escape }}"
             data-price_per_item="{{ price_per_item }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
@@ -430,39 +439,14 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c sc-product-variant-options.liquid v0.1`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c sc-product-variant-options.liquid v0.2`, `color: red; font-weight:bold; background-color: yellow;`);
 
     const radios = document.querySelectorAll('input[name="Amount"]');
-
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
         const selected = event.target;
-        const sectionId = selected.dataset.section_id;
-        const productHandle = selected.dataset.product_handle;
-        const variantId = selected.dataset.currentvariant;
-
-        try {
-          // 🔹 Тягнемо сторінку товару з потрібною секцією
-          const url = `/products/${productHandle}?variant=${variantId}&section_id=${sectionId}`;
-          const response = await fetch(url);
-          const html = await response.text();
-
-          // 🔹 Парсимо отриманий HTML
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-
-          // 🔹 Шукаємо у ньому новий список benefits
-          const newBenefits = doc.querySelector("#sc-benefits-list");
-
-          if (newBenefits) {
-            const currentBenefits = document.querySelector("#sc-benefits-list");
-            if (currentBenefits) {
-              currentBenefits.innerHTML = newBenefits.innerHTML;
-            }
-          }
-        } catch (err) {
-          console.error("Помилка завантаження benefits:", err);
-        }
+        const currentBenefits = document.querySelector("#sc-benefits-list");
+        currentBenefits.innerHTML = selected.dataset.benefits_html;
       });
     });
   });
