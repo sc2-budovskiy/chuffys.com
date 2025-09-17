@@ -164,4 +164,8 @@
         height: 18px;
         width: 18px;
     }
+    .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
 }
