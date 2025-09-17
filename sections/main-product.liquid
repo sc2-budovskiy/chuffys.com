@@ -108,31 +108,25 @@
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+        {% comment %} SC changes 17.09.2025 {% endcomment %}
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-
-              {% comment %} SC changes 17.09.2025 {% endcomment %}
-               {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
-                
-                {% comment %} {% capture loop_subscriptions %}
+              {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
+                {% capture loop_subscriptions %}
                   {% render block %}
-                {% endcapture %} {% endcomment %}
+                {% endcapture %}
+              {% endif %}
+          {%- endcase -%}
+        {%- endfor -%}
 
-                {% render 'sc-product-variant-picker', 
-                  product: product, 
-                  block: block, 
-                  product_form_id: product_form_id, 
-                  sizing_chart_append: sizing_chart_append, 
-                  sizing_chart_html: sizing_chart_html,
-                  has_filtering: has_filtering
-                %}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% comment %} SC changes 17.09.2025 {% endcomment %}
+               {% unless block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
                 {% render block %}
-
-               {% else %}
-                {% render block %}
-               {% endif %}
-              
+               {% endunless %}              
             {%- when 'text' -%}
               {% render 'text-with-icon-block', block: block, margins: true, block_attributes: true %}
             {%- when 'title' -%}
@@ -722,7 +716,7 @@
                 has_filtering: has_filtering
               %} {% endcomment %}
 
-              {% comment %} {% render 'sc-product-variant-picker', 
+              {% render 'sc-product-variant-picker', 
                 product: product, 
                 block: block, 
                 product_form_id: product_form_id, 
@@ -730,7 +724,7 @@
                 sizing_chart_html: sizing_chart_html,
                 has_filtering: has_filtering,
                 loop_subscriptions: loop_subscriptions
-              %} {% endcomment %}
+              %} 
             {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
