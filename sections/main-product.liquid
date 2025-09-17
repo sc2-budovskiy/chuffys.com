@@ -109,10 +109,12 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {% comment %} SC changes 17.09.2025 {% endcomment %}
+        {% assign loop_subscriptions_block = false %}
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
               {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
+                {% assign loop_subscriptions_block = block %}
                 {% capture loop_subscriptions %}
                   {% render block %}
                 {% endcapture %}
@@ -725,6 +727,7 @@
                 has_filtering: has_filtering,
                 loop_subscriptions: loop_subscriptions
               %} 
+              {% render loop_subscriptions_block %}
             {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
