@@ -480,24 +480,38 @@
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
     const loopContainer = document.getElementById('sc-loop');
-
     const radios = document.querySelectorAll('input[name="Amount"]');
+
+    function changeVariant(event){
+      console.log(`%c changeVariant(){`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      const selected = event.target;
+
+      const benefits_html = selected.dataset.benefits_html;
+
+      const one_month_benefits_html = selected.dataset.one_month_benefits_html;
+      const two_month_benefits_html = selected.dataset.two_month_benefits_html;
+      const three_month_benefits_html = selected.dataset.three_month_benefits_html;
+
+      console.log('benefits_html', benefits_html);
+      console.log('one_month_benefits_html', one_month_benefits_html);
+      console.log('two_month_benefits_html', two_month_benefits_html);
+      console.log('three_month_benefits_html', three_month_benefits_html);
+
+      if(currentBenefits){
+        currentBenefits.innerHTML = three_month_benefits_html;
+      }
+    }
+
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
         console.log(`%c radio.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
 
-        const selected = event.target;
-        const variant_id = selected.dataset.variant_id;
-        const benefits_html = selected.dataset.benefits_html;
-
-        console.log('variant_id', variant_id);
-        console.log('benefits_html', benefits_html);
-
-        if(currentBenefits){
-          currentBenefits.innerHTML = benefits_html;
-        }
+        changeVariant(event);
       });
     });
+
+
 
 
     function showLoop(){
