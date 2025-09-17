@@ -7,7 +7,6 @@
 
 .sc-package__wrapper {
     border:1px solid #cccccd;
-    /* border:1px solid #afafb1; */
     border-radius:10px;
     padding:28px;
     margin-bottom:20px;
@@ -135,3 +134,17 @@
     color: #555;
 }
 
+
+@media screen and (min-width: 100px) and (max-width: 1020px) {
+    .sc-package__wrapper {
+        padding: 15px;
+    }
+	.sc-package .sc-package__amount label .sc-package__value-block {
+        display: flex;
+        gap: 5px;
+    }
+    .sc-package .sc-package__amount label {
+        gap: 5px;
+        padding: 20px 10px 20px 10px;
+    }
+}
