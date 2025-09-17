@@ -111,19 +111,16 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              <h1>Render app block here:</h1>
-              <ul>
-                <li>block.id: {{ block.id }}</li>
-                <li>block.type: {{ block.type }}</li>
-                <li>block.shopify_attributes: {{ block.shopify_attributes }}</li>
-              </ul>
-              <h2>block.settings:</h2>
-              <ul>
-                {% for key in block.settings %}
-                  <li>{{ key }}: {{ block.settings[key] }}</li>
-                {% endfor %}
-              </ul>
-              {% render block %}
+
+              {% comment %} SC changes 17.09.2025 {% endcomment %}
+               {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
+                {% capture loop_subscriptions %}
+                  {% render block %}
+                {% endcapture %}
+               {% else %}
+                {% render block %}
+               {% endif %}
+              
             {%- when 'text' -%}
               {% render 'text-with-icon-block', block: block, margins: true, block_attributes: true %}
             {%- when 'title' -%}
@@ -712,6 +709,16 @@
                 sizing_chart_html: sizing_chart_html,
                 has_filtering: has_filtering
               %} {% endcomment %}
+
+              {% render 'sc-product-variant-picker', 
+                product: product, 
+                block: block, 
+                product_form_id: product_form_id, 
+                sizing_chart_append: sizing_chart_append, 
+                sizing_chart_html: sizing_chart_html,
+                has_filtering: has_filtering,
+                loop_subscriptions: loop_subscriptions
+              %}
             {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,

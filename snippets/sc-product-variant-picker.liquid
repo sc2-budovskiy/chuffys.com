@@ -7,7 +7,15 @@
   - product_form_id: {String} Id of the product form to which the variant picker is associated.
   - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
   Usage:
-  {% render 'sc-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+  {% render 'sc-product-variant-picker', 
+                product: product, 
+                block: block, 
+                product_form_id: product_form_id, 
+                sizing_chart_append: sizing_chart_append, 
+                sizing_chart_html: sizing_chart_html,
+                has_filtering: has_filtering,
+                loop_subscriptions: loop_subscriptions
+  %}
 {% endcomment %}
 
 <!-- snippets/sc-product-variant-picker.liquid -->
@@ -119,6 +127,7 @@
               {% when 'amount' %}
                 <div class="sc-package__amount">
                   {% render 'sc-product-variant-options', product: product, option: option, block: block, type: 'amount' %}
+                  {% loop_subscriptions %}
                 </div>
               {% else %}
                 {% render 'product-variant-options', product: product, option: option, block: block, type: 'pills' %}
