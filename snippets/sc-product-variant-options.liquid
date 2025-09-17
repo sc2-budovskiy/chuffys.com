@@ -419,11 +419,33 @@
 {%- endfor -%}
 
 <div class="sc-benefits">
-  <ul class="sc-benefits__list">
+  <ul id="sc-benefits-list" class="sc-benefits__list">
     {% for benefit in final_benefits %}
       <li class="sc-benefits__item">{{ benefit }}</li>
     {% endfor %}
   </ul>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // вибираємо всі radio-кнопки з name="Amount"
+    const radios = document.querySelectorAll('input[name="Amount"]');
+
+    radios.forEach(radio => {
+      radio.addEventListener("change", (event) => {
+        // елемент, який став вибраним
+        const selected = event.target;
+
+        console.log("Обрано:", selected.value); 
+        console.log("Chews:", selected.dataset.chews);
+        console.log("Variant ID:", selected.dataset.currentvariant);
+        console.log("Benefits:", selected.dataset.benefits);
+        console.log("Ціна за штуку:", selected.dataset.price_per_item);
+
+        // тут можна виконати свій JS код
+      });
+    });
+  });
+</script>
 <!-- snippets/sc-product-variant-options.liquid END -->
 
