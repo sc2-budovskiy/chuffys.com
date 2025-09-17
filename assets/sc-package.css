@@ -138,6 +138,9 @@
     color: green;
     content: "✓";
 }
+.sc-benefits ul.sc-benefits__list li {
+    padding-left:6px;
+}
 
 
 @media screen and (min-width: 750px) and (max-width: 1020px) {
