@@ -440,7 +440,7 @@
   </ul>
 </div>
 
-<div id="sc-loop">
+<div id="sc-loop" class="sc-loop-hide">
   {% render loop_subscriptions_block %}
 </div>
 
@@ -450,6 +450,8 @@
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
+    const loopContainer = document.getElementById('sc-loop');
+
     const radios = document.querySelectorAll('input[name="Amount"]');
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
@@ -469,6 +471,22 @@
     });
 
 
+    function showLoop(){
+      console.log(`%c showLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      if(loopContainer){
+        loopContainer.classList.remove('sc-loop-hide');
+      }
+    }
+
+    function hideLoop(){
+      console.log(`%c function hideLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      if(loopContainer){
+        loopContainer.classList.add('sc-loop-hide');
+      }
+    }
+
     //Show/Hide Loop
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
     show_loop.addEventListener("change", async (event) => {
@@ -477,10 +495,10 @@
       const loopContainer = document.getElementById('sc-loop');
       if(event.target.checked){
         // Show Loop
-        console.log(`%c Show loop`, `color: red; font-weight:bold; background-color: yellow;`);
+        showLoop();
       } else {
         // Hide Loop
-        console.log(`%c Hide loop`, `color: red; font-weight:bold; background-color: yellow;`);
+        hideLoop();
       }
     });
 

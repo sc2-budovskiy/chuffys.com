@@ -218,6 +218,15 @@
   text-decoration: underline;
 }
 
+#sc-loop {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    max-height: 1000px;
+}
+#sc-loop.sc-loop-hide {
+    max-height: 0;
+}
+
 
 
 
