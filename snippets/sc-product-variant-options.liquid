@@ -448,6 +448,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     console.log(`%c ### sc-product-variant-options.liquid v0.888 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
+    //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
     const radios = document.querySelectorAll('input[name="Amount"]');
     radios.forEach(radio => {
