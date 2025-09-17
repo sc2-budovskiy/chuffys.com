@@ -150,4 +150,8 @@
     .template-suffix--sc-flow .product__info-wrapper {
         padding: 0 0 0 2rem !important;
     }
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-save {
+        font-size: 12px;
+        padding: 5px 5px;
+    }
 }
