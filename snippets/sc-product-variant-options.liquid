@@ -611,6 +611,33 @@
     });
 
 
+    // Створюємо MutationObserver для відстеження змін у DOM
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        // Перевіряємо, чи додано нові вузли
+        if (mutation.addedNodes.length) {
+          // Шукаємо елемент select з атрибутом name="selling_plan"
+          const selectElement = document.querySelector('select[name="selling_plan"]');
+          if (selectElement) {
+            // Додаємо обробник події change
+            selectElement.addEventListener('change', (event) => {
+              console.log('Значення селекту змінилося:', event.target.value);
+              // Тут можна додати вашу логіку
+            });
+            // Після знаходження елемента можна відключити observer, якщо потрібно
+            observer.disconnect();
+          }
+        }
+      });
+    });
+
+    // Налаштування MutationObserver для відстеження додавання вузлів у DOM
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+
   });
 </script>
 <!-- snippets/sc-product-variant-options.liquid END -->
