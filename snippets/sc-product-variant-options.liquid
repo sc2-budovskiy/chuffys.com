@@ -43,6 +43,8 @@
   endif
 -%}
 
+{% assign final_benefits = false %}
+
 <!-- snippets/sc-product-variant-options.liquid -->
 {%- for value in option.values -%}
   {%- liquid
@@ -222,14 +224,19 @@
           <div class="sc-amount__recommended">{{ recommended }}</div>
         {% endif %}
 
-        {% assign benefits = '' %}
+        {% assign benefits = currentVariant.metafields.custom.benefits.value %}
+        {% if option.selected_value == value %}
+          {% assign final_benefits = benefits %}
+        {% endif %}
+
+        {% comment %} {% assign benefits = '' %}
         {% for benefit in currentVariant.metafields.custom.benefits.value %}
           {% if forloop.last %}
             {% assign benefits = benefits | append: benefit %}
           {% else %}
             {% assign benefits = benefits | append: benefit | append: ';' %}
           {% endif %}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
         {% comment %} {% if option.selected_value == value %}{% endif %} {% endcomment %}
 
         <div class="sc-test-v01 sc-package__input-block">
@@ -410,5 +417,13 @@
       </label>
   {% endcase %}
 {%- endfor -%}
+
+<div class="sc-benefits">
+  <ul class="sc-benefits__list">
+    {% for benefit in final_benefits %}
+      <li class="sc-benefits__item">{{ benefit }}</li>
+    {% endfor %}
+  </ul>
+</div>
 <!-- snippets/sc-product-variant-options.liquid END -->
 
