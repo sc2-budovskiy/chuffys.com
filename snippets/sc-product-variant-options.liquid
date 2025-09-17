@@ -499,10 +499,11 @@
         if(show_loop.checked){
           // Subscriptions Loop is shown
           const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
-          const selectedValue = loop_widget_sp_selector.value;
+          const selectedOption = loop_widget_sp_selector.options[loop_widget_sp_selector.selectedIndex];
+          const selectedText = selectedOption.text;
 
-          console.log(`%c selectedValue`, `color: red; font-weight:bold; background-color: yellow;`);
-          console.dir(selectedValue);
+          console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
+          console.dir(selectedText);
 
           currentBenefits.innerHTML = three_month_benefits_html;
         } else {
