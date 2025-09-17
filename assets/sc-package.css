@@ -170,7 +170,7 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 450px) {
+@media screen and (min-width: 350px) and (max-width: 450px) {
     .sc-package__wrapper {
         padding: 20px;
     }
@@ -187,7 +187,7 @@
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 374.99px) {
+@media screen and (min-width: 100px) and (max-width: 349.99px) {
     .sc-package__wrapper {
         padding: 15px;
     }
