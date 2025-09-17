@@ -481,6 +481,8 @@
     const currentBenefits = document.getElementById('sc-benefits');
     const loopContainer = document.getElementById('sc-loop');
     const radios = document.querySelectorAll('input[name="Amount"]');
+    const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
+
 
     function changeVariant(event){
       console.log(`%c changeVariant(){`, `color: red; font-weight:bold; background-color: yellow;`);
@@ -499,8 +501,15 @@
       console.log('three_month_benefits_html', three_month_benefits_html);
 
       if(currentBenefits){
-        currentBenefits.innerHTML = three_month_benefits_html;
+        if(show_loop.checked){
+          // Subscriptions Loop is shown
+          currentBenefits.innerHTML = one_month_benefits_html;
+        } else {
+          // Subscriptions Loop is hidden
+          currentBenefits.innerHTML = benefits_html;
+        }
       }
+
     }
 
     radios.forEach(radio => {
@@ -531,7 +540,6 @@
     }
 
     //Show/Hide Loop
-    const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
     show_loop.addEventListener("change", async (event) => {
       console.log(`%c show_loop.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
 
