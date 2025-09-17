@@ -224,7 +224,7 @@
           <div class="sc-amount__recommended">{{ recommended }}</div>
         {% endif %}
 
-        {% assign benefits = currentVariant.metafields.custom.benefits.value %}
+        {% assign benefits = variant.metafields.custom.benefits.value %}
         {% if option.selected_value == value %}
           {% assign final_benefits = benefits %}
         {% endif %}
@@ -237,15 +237,6 @@
           </ul>
         {%- endcapture -%}
 
-        {% comment %} {% assign benefits = '' %}
-        {% for benefit in currentVariant.metafields.custom.benefits.value %}
-          {% if forloop.last %}
-            {% assign benefits = benefits | append: benefit %}
-          {% else %}
-            {% assign benefits = benefits | append: benefit | append: ';' %}
-          {% endif %}
-        {% endfor %} {% endcomment %}
-        {% comment %} {% if option.selected_value == value %}{% endif %} {% endcomment %}
 
         <div class="sc-test-v01 sc-package__input-block">
           <input
@@ -254,7 +245,7 @@
             name="{{ option.name }}{{ custom_name_identifier }}"
             value="{{ value | escape }}"
             data-chews="{{ chews }}"
-            data-currentVariant="{{ currentVariant.id }}"
+            data-currentVariant="{{ variant.id }}"
             data-section_id="{{ section.id }}"
             data-product_handle="{{ product.handle }}"
             data-benefits="{{ benefits }}"
@@ -429,7 +420,7 @@
   {% endcase %}
 {%- endfor -%}
 
-<div class="sc-benefits">
+<div id="sc-benefits" class="sc-benefits">
   <ul id="sc-benefits-list" class="sc-benefits__list">
     {% for benefit in final_benefits %}
       <li class="sc-benefits__item">{{ benefit }}</li>
@@ -439,9 +430,9 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.5 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.666 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
-    const currentBenefits = document.getElementById('sc-benefits-list');
+    const currentBenefits = document.getElementById('sc-benefits');
     const radios = document.querySelectorAll('input[name="Amount"]');
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
