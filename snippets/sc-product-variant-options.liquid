@@ -495,14 +495,15 @@
       const two_month_benefits_html = selected.dataset.two_month_benefits_html;
       const three_month_benefits_html = selected.dataset.three_month_benefits_html;
 
-      console.log('benefits_html', benefits_html);
-      console.log('one_month_benefits_html', one_month_benefits_html);
-      console.log('two_month_benefits_html', two_month_benefits_html);
-      console.log('three_month_benefits_html', three_month_benefits_html);
-
       if(currentBenefits){
         if(show_loop.checked){
           // Subscriptions Loop is shown
+          const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
+          const selectedValue = loop_widget_sp_selector.value;
+
+          console.log(`%c selectedValue`, `color: red; font-weight:bold; background-color: yellow;`);
+          console.dir(selectedValue);
+
           currentBenefits.innerHTML = three_month_benefits_html;
         } else {
           // Subscriptions Loop is hidden
