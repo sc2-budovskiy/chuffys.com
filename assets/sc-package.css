@@ -136,7 +136,7 @@
 
 .sc-benefits ul.sc-benefits__list li::marker {
     color: green;
-    content: "\2714";
+    content: "U+2714";
 }
 
 .sc-benefits ul.sc-benefits__list li {
