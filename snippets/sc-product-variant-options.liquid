@@ -500,12 +500,21 @@
           // Subscriptions Loop is shown
           const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
           const selectedOption = loop_widget_sp_selector.options[loop_widget_sp_selector.selectedIndex];
-          const selectedText = selectedOption.text;
+          const selectedText = selectedOption.text.toLowrerCase();
 
           console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
           console.dir(selectedText);
 
-          currentBenefits.innerHTML = three_month_benefits_html;
+          if(selectedText.includes('every month')){
+            currentBenefits.innerHTML = one_month_benefits_html;
+          } else if(selectedText.includes('every 2 months')){
+            currentBenefits.innerHTML = two_month_benefits_html;
+          } else if(selectedText.includes('every 3 months')){
+            currentBenefits.innerHTML = three_month_benefits_html;
+          } else {
+            currentBenefits.innerHTML = one_month_benefits_html;
+          }
+
         } else {
           // Subscriptions Loop is hidden
           currentBenefits.innerHTML = benefits_html;
