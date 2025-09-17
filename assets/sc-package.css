@@ -37,7 +37,7 @@
     color: rgb(18, 18, 18);
 }
 
-.sc-package .sc-package__amount label {
+.sc-package .sc-package__amount label:not(.sc-switch) {
     display:flex;
     align-items: center;
     gap: 7px;
