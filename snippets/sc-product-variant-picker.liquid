@@ -126,8 +126,7 @@
                 </div>
               {% when 'amount' %}
                 <div class="sc-package__amount">
-                  {% render 'sc-product-variant-options', product: product, option: option, block: block, type: 'amount' %}
-                  {% render loop_subscriptions_block %}
+                  {% render 'sc-product-variant-options', product: product, option: option, block: block, type: 'amount', loop_subscriptions_block:loop_subscriptions_block %}
                 </div>
               {% else %}
                 {% render 'product-variant-options', product: product, option: option, block: block, type: 'pills' %}
