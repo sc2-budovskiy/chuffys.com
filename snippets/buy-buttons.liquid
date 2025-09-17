@@ -83,10 +83,6 @@
         novalidate: 'novalidate',
         data-type: 'add-to-cart-form'
       -%}
-
-        {% comment %} SC changes 17.09.2025 {% endcomment %}
-        {% render 'loop-subscriptions', type: 'product-widget', product: product %}
-
         <div class="hidden product-form__variants" id="product-form-{{ section.id }}__variants" data-values=""></div>
         <input
           type="hidden"
