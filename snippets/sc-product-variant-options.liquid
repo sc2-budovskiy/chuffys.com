@@ -483,6 +483,37 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
+    const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
+    loop_widget_sp_selector.addEventListener("change", async (event) => {
+      console.log(`%c loop_widget_sp_selector.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      const selectedOption = loop_widget_sp_selector.options[loop_widget_sp_selector.selectedIndex];
+      const selectedText = selectedOption.text;
+
+      console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
+      console.dir(selectedText);
+
+      if(currentBenefits){
+        const selectedRadio = document.querySelector('input[name="Amount"]:checked');
+        if(selectedRadio){
+          const one_month_benefits_html = selectedRadio.dataset.one_month_benefits_html;
+          const two_month_benefits_html = selectedRadio.dataset.two_month_benefits_html;
+          const three_month_benefits_html = selectedRadio.dataset.three_month_benefits_html;
+
+          if(selectedText.includes('every month')){
+            currentBenefits.innerHTML = one_month_benefits_html;
+          } else if(selectedText.includes('every 2 months')){
+            currentBenefits.innerHTML = two_month_benefits_html;
+          } else if(selectedText.includes('every 3 months')){
+            currentBenefits.innerHTML = three_month_benefits_html;
+          } else {
+            currentBenefits.innerHTML = one_month_benefits_html;
+          }
+        }
+      }
+
+    });
+
 
     function changeVariant(event){
       console.log(`%c changeVariant(){`, `color: red; font-weight:bold; background-color: yellow;`);
@@ -498,7 +529,6 @@
       if(currentBenefits){
         if(show_loop.checked){
           // Subscriptions Loop is shown
-          const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
           const selectedOption = loop_widget_sp_selector.options[loop_widget_sp_selector.selectedIndex];
           const selectedText = selectedOption.text;
 
