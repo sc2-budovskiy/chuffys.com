@@ -114,9 +114,21 @@
 
               {% comment %} SC changes 17.09.2025 {% endcomment %}
                {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
+                
                 {% capture loop_subscriptions %}
                   {% render block %}
                 {% endcapture %}
+
+                {% render 'sc-product-variant-picker', 
+                  product: product, 
+                  block: block, 
+                  product_form_id: product_form_id, 
+                  sizing_chart_append: sizing_chart_append, 
+                  sizing_chart_html: sizing_chart_html,
+                  has_filtering: has_filtering,
+                  loop_subscriptions: loop_subscriptions
+                %}
+
                {% else %}
                 {% render block %}
                {% endif %}
@@ -710,7 +722,7 @@
                 has_filtering: has_filtering
               %} {% endcomment %}
 
-              {% render 'sc-product-variant-picker', 
+              {% comment %} {% render 'sc-product-variant-picker', 
                 product: product, 
                 block: block, 
                 product_form_id: product_form_id, 
@@ -718,7 +730,7 @@
                 sizing_chart_html: sizing_chart_html,
                 has_filtering: has_filtering,
                 loop_subscriptions: loop_subscriptions
-              %}
+              %} {% endcomment %}
             {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
