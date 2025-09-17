@@ -111,7 +111,18 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              <h1>Render app block here</h1>
+              <h1>Render app block here:</h1>
+              <ul>
+                <li>block.id: {{ block.id }}</li>
+                <li>block.type: {{ block.type }}</li>
+                <li>block.shopify_attributes: {{ block.shopify_attributes }}</li>
+              </ul>
+              <h2>block.settings:</h2>
+              <ul>
+                {% for key in block.settings %}
+                  <li>{{ key }}: {{ block.settings[key] }}</li>
+                {% endfor %}
+              </ul>
               {% render block %}
             {%- when 'text' -%}
               {% render 'text-with-icon-block', block: block, margins: true, block_attributes: true %}
