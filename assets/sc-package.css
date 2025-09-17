@@ -135,7 +135,7 @@
 }
 
 
-@media screen and (min-width: 100px) and (max-width: 1020px) {
+@media screen and (min-width: 750px) and (max-width: 1020px) {
     .sc-package__wrapper {
         padding: 15px;
     }
@@ -146,5 +146,8 @@
     .sc-package .sc-package__amount label {
         gap: 5px;
         padding: 20px 10px 20px 10px;
+    }
+    .product__info-wrapper {
+        padding: 0 0 0 5rem;
     }
 }

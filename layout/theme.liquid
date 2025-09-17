@@ -431,8 +431,9 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
   </head>
-
-  <body class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }}">
+  
+  {% comment %} SC changes 17.09.2025 {% endcomment %}
+  <body class="template-name--{{ template.name }} template-suffix--{{ template.suffix }} gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
