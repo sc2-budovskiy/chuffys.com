@@ -229,7 +229,6 @@
         {% if option.selected_value == value %}
           {% assign final_benefits = benefits %}
         {% endif %}
-
         {%- capture benefits_html -%}
           <ul id="sc-benefits-list" class="sc-benefits__list">
             {%- for benefit in benefits -%}
@@ -239,7 +238,35 @@
         {%- endcapture -%}
 
 
-        <div class="sc-test-v01 sc-package__input-block">
+        {% assign one_month_benefits = currentVariant.metafields.custom.one_month_benefits.value %}
+        {%- capture one_month_benefits_html -%}
+          <ul id="sc-benefits-list" class="sc-benefits__list">
+            {%- for benefit in one_month_benefits -%}
+              <li class="sc-benefits__item">{{ benefit }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endcapture -%}
+
+        {% assign two_month_benefits = currentVariant.metafields.custom.two_month_benefits.value %}
+        {%- capture two_month_benefits_html -%}
+          <ul id="sc-benefits-list" class="sc-benefits__list">
+            {%- for benefit in two_month_benefits -%}
+              <li class="sc-benefits__item">{{ benefit }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endcapture -%}
+
+        {% assign three_month_benefits = currentVariant.metafields.custom.three_month_benefits.value %}
+        {%- capture three_month_benefits_html -%}
+          <ul id="sc-benefits-list" class="sc-benefits__list">
+            {%- for benefit in three_month_benefits -%}
+              <li class="sc-benefits__item">{{ benefit }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endcapture -%}
+
+
+        <div class="sc-package__input-block">
           <input
             type="radio"
             id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -249,8 +276,10 @@
             data-variant_id="{{ currentVariant.id }}"
             data-section_id="{{ section.id }}"
             data-product_handle="{{ product.handle }}"
-            data-benefits="{{ benefits }}"
             data-benefits_html="{{ benefits_html | strip_newlines | escape }}"
+            data-one_month_benefits_html="{{ one_month_benefits_html | strip_newlines | escape }}"
+            data-two_month_benefits_html="{{ two_month_benefits_html | strip_newlines | escape }}"
+            data-three_month_benefits_html="{{ three_month_benefits_html | strip_newlines | escape }}"
             data-price_per_item="{{ price_per_item }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
