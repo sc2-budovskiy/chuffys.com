@@ -154,4 +154,14 @@
         font-size: 12px;
         padding: 5px 5px;
     }
+    .sc-package .sc-package__value-row1 {
+        font-size: 15px;
+    }
+    .sc-package__value-row2 {
+        font-size: 13px;
+    }
+    .sc-package .product-form__input.product-form__input--amount input[type=radio] {
+        height: 18px;
+        width: 18px;
+    }
 }
