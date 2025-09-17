@@ -222,11 +222,15 @@
           <div class="sc-amount__recommended">{{ recommended }}</div>
         {% endif %}
 
-        {% assign benefits = false %}
-        {% comment %} {% if option.selected_value == value %} {% endcomment %}
-        {% if true %}
-          {% assign benefits = currentVariant.metafields.custom.benefits.value %}
-        {% endif %}
+        {% assign benefits = '' %}
+        {% for benefit in currentVariant.metafields.custom.benefits.value %}
+          {% if forloop.last %}
+            {% assign benefits = benefits | append: benefit %}
+          {% else %}
+            {% assign benefits = benefits | append: benefit | append: ';' %}
+          {% endif %}
+        {% endfor %}
+        {% comment %} {% if option.selected_value == value %}{% endif %} {% endcomment %}
 
         <div class="sc-test-v01 sc-package__input-block">
           <input
