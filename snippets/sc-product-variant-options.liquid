@@ -613,12 +613,16 @@
 
     // Створюємо MutationObserver для відстеження змін у DOM
     const observer = new MutationObserver((mutations) => {
+      console.log(`%c MutationObserver `, `color: red; font-weight:bold; background-color: yellow;`);
       mutations.forEach((mutation) => {
+        console.log(`%c mutation `, `color: red; font-weight:bold; background-color: yellow;`);
         // Перевіряємо, чи додано нові вузли
-        if (mutation.addedNodes.length) {
+        // if (mutation.addedNodes.length) {
           // Шукаємо елемент select з атрибутом name="selling_plan"
           const selectElement = document.querySelector('select[name="selling_plan"]');
+          console.dir(`selectElement:`);console.dir(selectElement);
           if (selectElement) {
+
             // Додаємо обробник події change
             selectElement.addEventListener('change', (event) => {
               console.log('Значення селекту змінилося:', event.target.value);
@@ -627,7 +631,7 @@
             // Після знаходження елемента можна відключити observer, якщо потрібно
             observer.disconnect();
           }
-        }
+        // }
       });
     });
 
