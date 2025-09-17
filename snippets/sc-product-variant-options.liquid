@@ -222,6 +222,12 @@
           <div class="sc-amount__recommended">{{ recommended }}</div>
         {% endif %}
 
+        {% assign benefits = false %}
+        {% comment %} {% if option.selected_value == value %} {% endcomment %}
+        {% if true %}
+          {% assign benefits = currentVariant.metafields.custom.benefits.value %}
+        {% endif %}
+
         <div class="sc-test-v01 sc-package__input-block">
           <input
             type="radio"
@@ -230,6 +236,7 @@
             value="{{ value | escape }}"
             data-chews="{{ chews }}"
             data-currentVariant="{{ currentVariant.price }}"
+            data-benefits="{{ benefits }}"
             data-price_per_item="{{ price_per_item }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
