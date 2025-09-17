@@ -423,7 +423,7 @@
 
 <div class="sc-subscription-box">
   <label class="sc-switch">
-    <input type="checkbox" name="show_loop">
+    <input type="checkbox" name="show_loop_checkbox">
     <span class="sc-slider"></span>
   </label>
   <div class="sc-subscription-text">
@@ -466,6 +466,24 @@
         }
       });
     });
+
+
+    //Show/Hide Loop
+    const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
+    show_loop.addEventListener("change", async (event) => {
+      console.log(`%c show_loop.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      const loopContainer = document.getElementById('sc-loop');
+      if(event.target.checked){
+        // Show Loop
+        console.log(`%c Show loop`, `color: red; font-weight:bold; background-color: yellow;`);
+      } else {
+        // Hide Loop
+        console.log(`%c Hide loop`, `color: red; font-weight:bold; background-color: yellow;`);
+      }
+    });
+
+
   });
 </script>
 <!-- snippets/sc-product-variant-options.liquid END -->
