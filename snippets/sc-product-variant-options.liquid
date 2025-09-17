@@ -430,21 +430,39 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // вибираємо всі radio-кнопки з name="Amount"
+    console.log(`%c sc-product-variant-options.liquid v0.1`, `color: red; font-weight:bold; background-color: yellow;`);
+
     const radios = document.querySelectorAll('input[name="Amount"]');
 
     radios.forEach(radio => {
-      radio.addEventListener("change", (event) => {
-        // елемент, який став вибраним
+      radio.addEventListener("change", async (event) => {
         const selected = event.target;
+        const sectionId = selected.dataset.section_id;
+        const productHandle = selected.dataset.product_handle;
+        const variantId = selected.dataset.currentvariant;
 
-        console.log("Обрано:", selected.value); 
-        console.log("Chews:", selected.dataset.chews);
-        console.log("Variant ID:", selected.dataset.currentvariant);
-        console.log("Benefits:", selected.dataset.benefits);
-        console.log("Ціна за штуку:", selected.dataset.price_per_item);
+        try {
+          // 🔹 Тягнемо сторінку товару з потрібною секцією
+          const url = `/products/${productHandle}?variant=${variantId}&section_id=${sectionId}`;
+          const response = await fetch(url);
+          const html = await response.text();
 
-        // тут можна виконати свій JS код
+          // 🔹 Парсимо отриманий HTML
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+
+          // 🔹 Шукаємо у ньому новий список benefits
+          const newBenefits = doc.querySelector("#sc-benefits-list");
+
+          if (newBenefits) {
+            const currentBenefits = document.querySelector("#sc-benefits-list");
+            if (currentBenefits) {
+              currentBenefits.innerHTML = newBenefits.innerHTML;
+            }
+          }
+        } catch (err) {
+          console.error("Помилка завантаження benefits:", err);
+        }
       });
     });
   });
