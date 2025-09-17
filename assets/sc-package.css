@@ -75,7 +75,7 @@
     transform: translateY(-50%);
 }
 
-.sc-package .sc-package__amount label:has(input:checked) {
+.sc-package .sc-package__amount label:not(.sc-switch):has(input:checked) {
     background-color: #f6fff7;
     border: 1px solid #41a842;
 } 
