@@ -441,7 +441,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     console.log(`%c ### sc-product-variant-options.liquid v0.5 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
-    const currentBenefits = document.querySelector("#sc-benefits-list");
+    const currentBenefits = document.getElementById('sc-benefits-list');
     const radios = document.querySelectorAll('input[name="Amount"]');
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
