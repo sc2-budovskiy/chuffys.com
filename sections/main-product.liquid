@@ -115,9 +115,6 @@
             {%- when '@app' -%}
               {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
                 {% assign loop_subscriptions_block = block %}
-                {% capture loop_subscriptions %}
-                  {% render block %}
-                {% endcapture %}
               {% endif %}
           {%- endcase -%}
         {%- endfor -%}
@@ -725,9 +722,8 @@
                 sizing_chart_append: sizing_chart_append, 
                 sizing_chart_html: sizing_chart_html,
                 has_filtering: has_filtering,
-                loop_subscriptions: loop_subscriptions
+                loop_subscriptions_block: loop_subscriptions_block
               %} 
-              {% render loop_subscriptions_block %}
             {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,

@@ -14,7 +14,7 @@
                 sizing_chart_append: sizing_chart_append, 
                 sizing_chart_html: sizing_chart_html,
                 has_filtering: has_filtering,
-                loop_subscriptions: loop_subscriptions
+                loop_subscriptions_block: loop_subscriptions_block
   %}
 {% endcomment %}
 
@@ -127,7 +127,7 @@
               {% when 'amount' %}
                 <div class="sc-package__amount">
                   {% render 'sc-product-variant-options', product: product, option: option, block: block, type: 'amount' %}
-                  {% loop_subscriptions %}
+                  {% render loop_subscriptions_block %}
                 </div>
               {% else %}
                 {% render 'product-variant-options', product: product, option: option, block: block, type: 'pills' %}
