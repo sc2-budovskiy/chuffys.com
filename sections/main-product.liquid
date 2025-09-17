@@ -115,9 +115,9 @@
               {% comment %} SC changes 17.09.2025 {% endcomment %}
                {% if block.id contains 'loop_subscriptions' or block.id contains 'loop_widget' %}
                 
-                {% capture loop_subscriptions %}
+                {% comment %} {% capture loop_subscriptions %}
                   {% render block %}
-                {% endcapture %}
+                {% endcapture %} {% endcomment %}
 
                 {% render 'sc-product-variant-picker', 
                   product: product, 
@@ -125,9 +125,9 @@
                   product_form_id: product_form_id, 
                   sizing_chart_append: sizing_chart_append, 
                   sizing_chart_html: sizing_chart_html,
-                  has_filtering: has_filtering,
-                  loop_subscriptions: loop_subscriptions
+                  has_filtering: has_filtering
                 %}
+                {% render block %}
 
                {% else %}
                 {% render block %}
