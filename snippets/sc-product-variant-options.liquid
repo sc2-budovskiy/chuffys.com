@@ -439,14 +439,17 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.4 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.5 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
+    const currentBenefits = document.querySelector("#sc-benefits-list");
     const radios = document.querySelectorAll('input[name="Amount"]');
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
         const selected = event.target;
-        const currentBenefits = document.querySelector("#sc-benefits-list");
-        currentBenefits.innerHTML = selected.dataset.benefits_html;
+        const benefits_html = selected.dataset.benefits_html;
+        if(currentBenefits){
+          currentBenefits.innerHTML = benefits_html;
+        }
       });
     });
   });
