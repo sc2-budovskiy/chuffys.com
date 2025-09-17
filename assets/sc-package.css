@@ -175,12 +175,7 @@
         padding: 20px;
     }
     .sc-package .product-form__input {
-        flex: 0 0 100%;
-        padding: 0;
         margin: 0 0 1.5rem;
-        max-width: 37rem;
-        min-width: fit-content;
-        border: none;
     }
     .sc-package .sc-package__amount label .sc-package__value-block {
         gap:5px;
@@ -192,12 +187,7 @@
         padding: 15px;
     }
     .sc-package .product-form__input {
-        flex: 0 0 100%;
-        padding: 0;
         margin: 0 0 1.5rem;
-        max-width: 37rem;
-        min-width: fit-content;
-        border: none;
     }
 	.sc-package .sc-package__amount label .sc-package__value-block {
         display: flex;
