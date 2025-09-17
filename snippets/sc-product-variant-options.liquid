@@ -445,8 +445,11 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     radios.forEach(radio => {
       radio.addEventListener("change", async (event) => {
+        console.log(`%c radio.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
+
         const selected = event.target;
         const benefits_html = selected.dataset.benefits_html;
+        console.log('benefits_html', benefits_html);
         if(currentBenefits){
           currentBenefits.innerHTML = benefits_html;
         }
