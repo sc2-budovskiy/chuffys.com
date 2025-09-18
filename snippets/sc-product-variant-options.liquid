@@ -280,6 +280,7 @@
             data-one_month_benefits_html="{{ one_month_benefits_html | strip_newlines | escape }}"
             data-two_month_benefits_html="{{ two_month_benefits_html | strip_newlines | escape }}"
             data-three_month_benefits_html="{{ three_month_benefits_html | strip_newlines | escape }}"
+            data-price="{{ currentVariant.price | money }}"
             data-price_per_item="{{ price_per_item }}"
             form="{{ product_form_id }}"
             {% if option.selected_value == value %}
@@ -585,6 +586,15 @@
           // Subscriptions Loop is hidden
           currentBenefits.innerHTML = benefits_html;
         }
+      }
+
+      //Set Dynamic Price on submit button 
+      const priceButtonText = document.getElementById('sc-main-atc-price');
+      if(show_loop.checked){
+        // Subscriptions Loop is shown
+      } else {
+        const simpleSelectedVariantPrice = selected.dataset.price;
+        priceButtonText.innerText = `• ${simpleSelectedVariantPrice}`;
       }
 
     }
