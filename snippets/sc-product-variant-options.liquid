@@ -208,9 +208,6 @@
       </label>
     {%- when 'amount' -%}
 
-      {% comment %} {% assign low_option_name = option.name | downcase %}
-      {% assign val_arr = value | escape | split: " " %} {% endcomment %}
-
       {% assign chews = currentVariant.metafields.custom.chews.value | abs %}
       {% assign price_per_item = currentVariant.price | divided_by: chews | money %}
       {% assign price_per_item_string = price_per_item | append: ' / chew' %}
