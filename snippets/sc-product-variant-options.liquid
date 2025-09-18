@@ -475,7 +475,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.333 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.444 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -487,7 +487,8 @@
         console.log(`%c function handleSelectChange(event, selectElement) {`, `color: red; font-weight:bold; background-color: yellow;`);
         
         console.log('Значення селекту змінилося:', event.target.value);
-        console.log('event.target:', event.target);
+        const selectedText = event.target.options[event.target.selectedIndex].text;
+        console.log('Текст вибраної опції:', selectedText);
 
         // const selectedOption = selectElement.options[selectElement.selectedIndex];
         // const selectedText = selectedOption.text;
