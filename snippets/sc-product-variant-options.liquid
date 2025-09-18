@@ -512,13 +512,23 @@
 
         //Set Dynamic Price on submit button
         if(show_loop.checked){
+          console.log(`%c if(show_loop.checked){`, `color: red; font-weight:bold; background-color: yellow;`);
+
           // Subscriptions Loop is shown
           const priceButtonText = document.getElementById('sc-button-text');
-          const loopSelectedPrice = document.querySelector('.loop-widget-purchase-option-price').innerText;
+          const loopSelectedPriceElement = document.querySelector('.loop-widget-purchase-option-price');
+          console.dir(`loopSelectedPriceElement`);console.dir(loopSelectedPriceElement);
+
+          const loopSelectedPrice = loopSelectedPriceElement ? loopSelectedPriceElement.innerText : 'price undefined';
+          console.dir(`loopSelectedPrice`);console.dir(loopSelectedPrice);
+
+
           setTimeout(() => {
             priceButtonText.innerText = `• ${loopSelectedPrice}`;
           }, 0);
         } else {
+          console.log(`%c if(show_loop.checked){} else {`, `color: red; font-weight:bold; background-color: yellow;`);
+
           // Subscriptions Loop is hidden
           const priceButtonText = document.getElementById('sc-button-text');
           const selectedRadio = document.querySelector('input[name="Amount"]:checked');
