@@ -536,7 +536,7 @@
     }
 
 
-    function subscribeSelectorEvent(){
+    function subscribeSelectorEvent(callback){
       console.log(`%c subscribeSelectorEvent(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
       // Створюємо MutationObserver для відстеження змін у DOM
@@ -555,6 +555,9 @@
               selectElement.addEventListener('change', (event) => {
                 handleSelectChange(event, selectElement);
               });
+
+              callback();
+
               // Після знаходження елемента можна відключити observer, якщо потрібно
               observer.disconnect();
             }
@@ -587,11 +590,11 @@
       const two_month_benefits_html = selected.dataset.two_month_benefits_html;
       const three_month_benefits_html = selected.dataset.three_month_benefits_html;
 
-      const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
-      console.dir(`subscribeSelectElement:`);console.dir(subscribeSelectElement);
-      // subscribeSelectElement.value = "Deliver every 3 months";
-      subscribeSelectElement.selectedIndex = monthNumber - 1;
-      subscribeSelectElement.dispatchEvent(new Event("change"));
+      // const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
+      // console.dir(`subscribeSelectElement:`);console.dir(subscribeSelectElement);
+      // // subscribeSelectElement.value = "Deliver every 3 months";
+      // subscribeSelectElement.selectedIndex = monthNumber - 1;
+      // subscribeSelectElement.dispatchEvent(new Event("change"));
 
 
       if(currentBenefits){
@@ -614,7 +617,16 @@
             currentBenefits.innerHTML = one_month_benefits_html;
           }
 
-          subscribeSelectorEvent();
+          subscribeSelectorEvent(() => {
+            console.log(`%c Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
+
+            const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
+            console.dir(`subscribeSelectElement:`);console.dir(subscribeSelectElement);
+            // subscribeSelectElement.value = "Deliver every 3 months";
+            subscribeSelectElement.selectedIndex = monthNumber - 1;
+            subscribeSelectElement.dispatchEvent(new Event("change"));
+          });
+          
         } else {
           // Subscriptions Loop is hidden
           currentBenefits.innerHTML = benefits_html;
