@@ -46,7 +46,7 @@
 
 {% assign final_benefits = false %}
 
-<!-- snippets/sc-product-variant-options.liquid v0.1 -->
+<!-- snippets/sc-product-variant-options.liquid v0.2 -->
 {%- for value in option.values -%}
   {%- liquid
     assign option_class = ''
@@ -473,7 +473,7 @@
   </ul>
 </div>
 
-<div id="sc-loop" class="sc-loop-hide">
+<div id="sc-loop" class="__sc-loop-hide">
   {% render loop_subscriptions_block %}
 </div>
 
@@ -676,7 +676,7 @@
       console.log(`%c showLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
       if(loopContainer){
-        loopContainer.classList.remove('sc-loop-hide');
+        // loopContainer.classList.remove('sc-loop-hide');
 
         subscribeSelectorEvent(() => {
           console.log(`%c showLoop Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
@@ -695,7 +695,7 @@
       console.log(`%c function hideLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
       if(loopContainer){
-        loopContainer.classList.add('sc-loop-hide');
+        // loopContainer.classList.add('sc-loop-hide');
       }
     }
 
