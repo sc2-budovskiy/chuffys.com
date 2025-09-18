@@ -680,11 +680,8 @@
 
         subscribeSelectorEvent(() => {
           console.log(`%c showLoop Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
-
           const selectedRadio = document.querySelector('input[name="Amount"]:checked');
-          const value = selectedRadio.value;
-          const monthNumber = parseInt(value.match(/\d+/)[0]);
-
+          const monthNumber = parseInt(selectedRadio.value.match(/\d+/)[0]);
           const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
           if(subscribeSelectElement){
             subscribeSelectElement.selectedIndex = monthNumber - 1;
