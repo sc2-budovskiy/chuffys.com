@@ -483,86 +483,71 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
+    function handleSelectChange(event, selectElement) {
+        console.log(`%c function handleSelectChange(event, selectElement) {`, `color: red; font-weight:bold; background-color: yellow;`);
+        
+        console.log('Значення селекту змінилося:', event.target.value);
+        console.log('event.target.text:', event.target.text);
+
+        // const selectedOption = selectElement.options[selectElement.selectedIndex];
+        // const selectedText = selectedOption.text;
+
+        // console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
+        // console.dir(selectedText);
+
+        // if(currentBenefits){
+        //   const selectedRadio = document.querySelector('input[name="Amount"]:checked');
+        //   if(selectedRadio){
+        //     const one_month_benefits_html = selectedRadio.dataset.one_month_benefits_html;
+        //     const two_month_benefits_html = selectedRadio.dataset.two_month_benefits_html;
+        //     const three_month_benefits_html = selectedRadio.dataset.three_month_benefits_html;
+
+        //     if(selectedText.includes('every month')){
+        //       currentBenefits.innerHTML = one_month_benefits_html;
+        //     } else if(selectedText.includes('every 2 months')){
+        //       currentBenefits.innerHTML = two_month_benefits_html;
+        //     } else if(selectedText.includes('every 3 months')){
+        //       currentBenefits.innerHTML = three_month_benefits_html;
+        //     } else {
+        //       currentBenefits.innerHTML = one_month_benefits_html;
+        //     }
+        //   }
+        // }
+
+    }
+
 
     function subscribeSelectorEvent(){
       console.log(`%c subscribeSelectorEvent(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
-      // const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
-      // console.dir(`loop_widget_sp_selector:`);console.dir(loop_widget_sp_selector);
+      // Створюємо MutationObserver для відстеження змін у DOM
+      const observer = new MutationObserver((mutations) => {
+        console.log(`%c MutationObserver `, `color: red; font-weight:bold; background-color: yellow;`);
+        mutations.forEach((mutation) => {
+          console.log(`%c mutation `, `color: red; font-weight:bold; background-color: yellow;`);
+          // Перевіряємо, чи додано нові вузли
+          // if (mutation.addedNodes.length) {
+            // Шукаємо елемент select з атрибутом name="selling_plan"
+            const selectElement = document.querySelector('select[name="selling_plan"]');
+            console.dir(`selectElement:`);console.dir(selectElement);
+            if (selectElement) {
 
-      // loop_widget_sp_selector.addEventListener('change', function() {
-      //   console.log(this.value); // Виводить вибране значення
-      // });
-
-      // loop_widget_sp_selector.addEventListener("change", async (event) => {
-      //   console.log(`%c loop_widget_sp_selector.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
-
-      //   const selectedOption = loop_widget_sp_selector.options[loop_widget_sp_selector.selectedIndex];
-      //   const selectedText = selectedOption.text;
-
-      //   console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
-      //   console.dir(selectedText);
-
-      //   if(currentBenefits){
-      //     const selectedRadio = document.querySelector('input[name="Amount"]:checked');
-      //     if(selectedRadio){
-      //       const one_month_benefits_html = selectedRadio.dataset.one_month_benefits_html;
-      //       const two_month_benefits_html = selectedRadio.dataset.two_month_benefits_html;
-      //       const three_month_benefits_html = selectedRadio.dataset.three_month_benefits_html;
-
-      //       if(selectedText.includes('every month')){
-      //         currentBenefits.innerHTML = one_month_benefits_html;
-      //       } else if(selectedText.includes('every 2 months')){
-      //         currentBenefits.innerHTML = two_month_benefits_html;
-      //       } else if(selectedText.includes('every 3 months')){
-      //         currentBenefits.innerHTML = three_month_benefits_html;
-      //       } else {
-      //         currentBenefits.innerHTML = one_month_benefits_html;
-      //       }
-      //     }
-      //   }
-
-      // });
-
-      const selectElement = document.querySelector('select[name="selling_plan"]');
-      console.dir(`selectElement:`);console.dir(selectElement);
-      if (selectElement) {
-        // Додаємо обробник події change
-        selectElement.addEventListener('change', (event) => {
-          console.log('Значення селекту змінилося:', event.target.value);
-          // Тут можна додати вашу логіку
+              // Додаємо обробник події change
+              selectElement.addEventListener('change', (event) => {
+                handleSelectChange(event, selectElement);
+              });
+              // Після знаходження елемента можна відключити observer, якщо потрібно
+              observer.disconnect();
+            }
+          // }
         });
-      }
+      });
 
-
-      // // Створюємо MutationObserver для відстеження змін у DOM
-      // const observer = new MutationObserver((mutations) => {
-      //   console.log(`%c MutationObserver `, `color: red; font-weight:bold; background-color: yellow;`);
-      //   mutations.forEach((mutation) => {
-      //     console.log(`%c mutation `, `color: red; font-weight:bold; background-color: yellow;`);
-      //     // Перевіряємо, чи додано нові вузли
-      //     // if (mutation.addedNodes.length) {
-      //       // Шукаємо елемент select з атрибутом name="selling_plan"
-      //       const selectElement = document.querySelector('select[name="selling_plan"]');
-      //       console.dir(`selectElement:`);console.dir(selectElement);
-      //       if (selectElement) {
-
-      //         // Додаємо обробник події change
-      //         selectElement.addEventListener('change', (event) => {
-      //           console.log('Значення селекту змінилося:', event.target.value);
-      //           // Тут можна додати вашу логіку
-      //         });
-      //         // Після знаходження елемента можна відключити observer, якщо потрібно
-      //         observer.disconnect();
-      //       }
-      //     // }
-      //   });
-      // });
-      // // Налаштування MutationObserver для відстеження додавання вузлів у DOM
-      // observer.observe(document.body, {
-      //   childList: true,
-      //   subtree: true
-      // });
+      // Налаштування MutationObserver для відстеження додавання вузлів у DOM
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
 
 
 
