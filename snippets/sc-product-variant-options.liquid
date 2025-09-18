@@ -510,6 +510,24 @@
           }
         }
 
+        //Set Dynamic Price on submit button
+        if(show_loop.checked){
+          // Subscriptions Loop is shown
+          const priceButtonText = document.getElementById('sc-button-text');
+          const loopSelectedPrice = document.querySelector('.loop-widget-purchase-option-price').innerText;
+          setTimeout(() => {
+            priceButtonText.innerText = `• ${loopSelectedPrice}`;
+          }, 0);
+        } else {
+          // Subscriptions Loop is hidden
+          const priceButtonText = document.getElementById('sc-button-text');
+          const selectedRadio = document.querySelector('input[name="Amount"]:checked');
+          if(selectedRadio){
+            const simpleSelectedVariantPrice = selectedRadio.dataset.price;
+            priceButtonText.innerText = `• ${simpleSelectedVariantPrice}`;
+          }
+        }
+
     }
 
 
