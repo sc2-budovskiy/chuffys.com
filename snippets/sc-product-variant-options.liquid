@@ -587,8 +587,10 @@
       const two_month_benefits_html = selected.dataset.two_month_benefits_html;
       const three_month_benefits_html = selected.dataset.three_month_benefits_html;
 
-      const selectElement = document.querySelector('select[name="selling_plan"]');
-      console.dir(`selectElement:`);console.dir(selectElement);
+      const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
+      console.dir(`subscribeSelectElement:`);console.dir(subscribeSelectElement);
+      subscribeSelectElement.value = "Deliver every 3 months"; 
+      subscribeSelectElement.dispatchEvent(new Event("change"));
 
 
       if(currentBenefits){
