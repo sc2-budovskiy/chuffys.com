@@ -208,8 +208,8 @@
       </label>
     {%- when 'amount' -%}
       {% assign low_option_name = option.name | downcase %}
-      {% assign val_arr = value | escape | split: ":" %}
-      {% assign chews = val_arr[1] | abs %}
+      {% assign val_arr = value | escape | split: " " %}
+      {% assign chews = low_option_name | abs %}
       {% assign price_per_item = currentVariant.price | divided_by: chews | money %}
       {% assign price_per_item_string = price_per_item | append: ' / chew' %}
       {% assign percentage_saved = currentVariant.compare_at_price | minus: currentVariant.price | times: 100.0 | divided_by: currentVariant.compare_at_price | floor | append: '%' %}
