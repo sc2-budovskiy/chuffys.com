@@ -134,7 +134,7 @@
                   </span>
                 {% endif %} {% endcomment %}
                 {% if block.settings.display_price %}
-                  <span id="sc-main-atc-price" class='__main-atc-price{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
+                  <span id="sc-button-text" class='__main-atc-price{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
                     • {{ product.selected_or_first_available_variant.price | money }}
                   </span>
                 {% endif %}
