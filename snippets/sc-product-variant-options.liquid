@@ -475,7 +475,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.555 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.777 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -594,6 +594,25 @@
         console.log(`%c radio.addEventListener("change", async (event) => {`, `color: red; font-weight:bold; background-color: yellow;`);
 
         changeVariant(event);
+      });
+    });
+
+
+    function changeFirstVariant(event){
+      console.log(`%c changeFirstVariant(){`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      const selected = document.querySelector('input[name="Amount"]:checked');
+      if(selected){
+        changeVariant({target: selected});
+      }
+    }
+
+    const firstRadios = document.querySelectorAll('input[name="Dog size"]');
+    firstRadios.forEach(radio => {
+      radio.addEventListener("change", async (event) => {
+        console.log(`%c firstRadios.forEach(radio => {`, `color: red; font-weight:bold; background-color: yellow;`);
+
+        changeFirstVariant(event);
       });
     });
 
