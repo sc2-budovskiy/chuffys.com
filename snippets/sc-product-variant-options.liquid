@@ -476,7 +476,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.777 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.888 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -511,13 +511,13 @@
         }
 
         //Set Dynamic Price on submit button
-        if(show_loop.checked){
-          console.log(`%c if(show_loop.checked){`, `color: red; font-weight:bold; background-color: yellow;`);
+        // if(show_loop.checked){
+          // console.log(`%c if(show_loop.checked){`, `color: red; font-weight:bold; background-color: yellow;`);
 
           // Subscriptions Loop is shown
-          const priceButtonText = document.getElementById('sc-button-text');
           const loopSelectedPriceElement = document.querySelector('.loop-widget-purchase-option-price');
           console.dir(`loopSelectedPriceElement`);console.dir(loopSelectedPriceElement);
+          const priceButtonText = document.getElementById('sc-button-text');
 
           const loopSelectedPrice = loopSelectedPriceElement ? loopSelectedPriceElement.innerText : 'price undefined';
           console.dir(`loopSelectedPrice`);console.dir(loopSelectedPrice);
@@ -526,17 +526,7 @@
           setTimeout(() => {
             priceButtonText.innerText = `• ${loopSelectedPrice}`;
           }, 0);
-        } else {
-          console.log(`%c if(show_loop.checked){} else {`, `color: red; font-weight:bold; background-color: yellow;`);
-
-          // Subscriptions Loop is hidden
-          const priceButtonText = document.getElementById('sc-button-text');
-          const selectedRadio = document.querySelector('input[name="Amount"]:checked');
-          if(selectedRadio){
-            const simpleSelectedVariantPrice = selectedRadio.dataset.price;
-            priceButtonText.innerText = `• ${simpleSelectedVariantPrice}`;
-          }
-        }
+        // }
 
     }
 
