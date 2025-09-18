@@ -129,7 +129,7 @@
                   {%- endif -%}
                 </span>
                 {% if block.settings.display_price %}
-                  <span id="main-atc-price-{{ section.id }}" class='__main-atc-price{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
+                  <span id="__main-atc-price-{{ section.id }}" class='__main-atc-price{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
                     • {{ product.selected_or_first_available_variant.price | money }}
                   </span>
                 {% endif %}
