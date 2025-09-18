@@ -589,7 +589,8 @@
 
       const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
       console.dir(`subscribeSelectElement:`);console.dir(subscribeSelectElement);
-      subscribeSelectElement.value = "Deliver every 3 months"; 
+      // subscribeSelectElement.value = "Deliver every 3 months"; 
+      subscribeSelectElement.selectedIndex = 2; 
       subscribeSelectElement.dispatchEvent(new Event("change"));
 
 
