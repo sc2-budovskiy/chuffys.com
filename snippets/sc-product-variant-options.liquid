@@ -476,7 +476,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.888 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.999 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -515,15 +515,17 @@
           // console.log(`%c if(show_loop.checked){`, `color: red; font-weight:bold; background-color: yellow;`);
 
           // Subscriptions Loop is shown
-          const loopSelectedPriceElement = document.querySelector('.loop-widget-purchase-option-price');
-          console.dir(`loopSelectedPriceElement`);console.dir(loopSelectedPriceElement);
-          const priceButtonText = document.getElementById('sc-button-text');
-
-          const loopSelectedPrice = loopSelectedPriceElement ? loopSelectedPriceElement.innerText : 'price undefined';
-          console.dir(`loopSelectedPrice`);console.dir(loopSelectedPrice);
-
-
           setTimeout(() => {
+            const loopSelectedPriceElement = document.querySelector('.loop-widget-purchase-option-price');
+            console.dir(`loopSelectedPriceElement`);
+            console.dir(loopSelectedPriceElement);
+            
+            const priceButtonText = document.getElementById('sc-button-text');
+
+            const loopSelectedPrice = loopSelectedPriceElement ? loopSelectedPriceElement.innerText : 'price undefined';
+            console.log(`%c loopSelectedPrice`, `color: red; font-weight:bold; background-color: yellow;`);
+            console.dir(loopSelectedPrice);
+
             priceButtonText.innerText = `• ${loopSelectedPrice}`;
           }, 0);
         // }
