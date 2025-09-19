@@ -490,9 +490,7 @@
     function getProductVariantPrices() {
       console.log(`%c function getProductVariantPrices() {`, `color: red; font-weight:bold; background-color: yellow;`);
       
-      if (!window.LOOP_WIDGET) return {
-        console.log(`%c if (!window.LOOP_WIDGET) return {`, `color: red; font-weight:bold; background-color: yellow;`);
-      };
+      if (!window.LOOP_WIDGET) return {};
 
       const product = Object.values(window.LOOP_WIDGET)[0].product;
 
