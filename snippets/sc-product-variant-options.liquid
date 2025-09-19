@@ -479,7 +479,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.111 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.222 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -580,8 +580,8 @@
 
       //Loop variants
       for (const variantId in variantPrices) {
-        const variantTitle = data[variantId].title;
-        const sellingPlans = data[variantId].sellingPlans.map(plan => ({
+        const variantTitle = variantPrices[variantId].title;
+        const sellingPlans = variantPrices[variantId].sellingPlans.map(plan => ({
           sellingPlanId: plan.sellingPlanId,
           name: plan.name,
           price: plan.price
