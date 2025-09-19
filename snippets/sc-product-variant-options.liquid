@@ -229,7 +229,7 @@
           {% assign final_benefits = benefits %}
         {% endif %}
         {%- capture benefits_html -%}
-          <ul id="sc-benefits-list" class="sc-benefits__list">
+          <ul id="sc-benefits-list--{{ currentVariant.id }}" class="sc-benefits__list">
             {%- for benefit in benefits -%}
               <li class="sc-benefits__item">{{ benefit }}</li>
             {%- endfor -%}
@@ -239,7 +239,7 @@
 
         {% assign one_month_benefits = currentVariant.metafields.custom.one_month_benefits.value %}
         {%- capture one_month_benefits_html -%}
-          <ul id="sc-benefits-list" class="sc-benefits__list">
+          <ul id="sc-benefits-list--{{ currentVariant.id }}" class="sc-benefits__list">
             {%- for benefit in one_month_benefits -%}
               <li class="sc-benefits__item">{{ benefit }}</li>
             {%- endfor -%}
@@ -248,7 +248,7 @@
 
         {% assign two_month_benefits = currentVariant.metafields.custom.two_month_benefits.value %}
         {%- capture two_month_benefits_html -%}
-          <ul id="sc-benefits-list" class="sc-benefits__list">
+          <ul id="sc-benefits-list--{{ currentVariant.id }}" class="sc-benefits__list">
             {%- for benefit in two_month_benefits -%}
               <li class="sc-benefits__item">{{ benefit }}</li>
             {%- endfor -%}
@@ -257,7 +257,7 @@
 
         {% assign three_month_benefits = currentVariant.metafields.custom.three_month_benefits.value %}
         {%- capture three_month_benefits_html -%}
-          <ul id="sc-benefits-list" class="sc-benefits__list">
+          <ul id="sc-benefits-list--{{ currentVariant.id }}" class="sc-benefits__list">
             {%- for benefit in three_month_benefits -%}
               <li class="sc-benefits__item">{{ benefit }}</li>
             {%- endfor -%}
@@ -290,20 +290,26 @@
           />
         </div>  
         <div class="sc-package__value-block">
-          <div class="sc-package__value-col1">
-            <div class="sc-package__value-row1">
-              {{ value -}}
-              <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>  
+          <div class="sc-package__value-block-row1">
+            <div class="sc-package__value-col1">
+              <div class="sc-package__value-row1">
+                {{ value -}}
+                <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>  
+              </div>
+              <div class="sc-package__value-row2">
+                {{ price_per_item_string }}
+              </div>
             </div>
-            <div class="sc-package__value-row2">
-              {{ price_per_item_string }}
+            <div class="sc-package__value-col2">
+              <div class="sc-package__value-save">Save {{ percentage_saved }}</div>
+            </div>
+            <div class="sc-package__value-col3">
+              <div class="sc-package__value-price">{{ currentVariant.price | money }}</div>
             </div>
           </div>
-          <div class="sc-package__value-col2">
-            <div class="sc-package__value-save">Save {{ percentage_saved }}</div>
-          </div>
-          <div class="sc-package__value-col3">
-            <div class="sc-package__value-price">{{ currentVariant.price | money }}</div>
+
+          <div class="sc-package__value-block-row2">
+            {{ benefits_html }}
           </div>
         </div>
       </label>
@@ -465,13 +471,13 @@
   </div>
 </div>
 
-<div id="sc-benefits" class="sc-benefits">
+{% comment %} <div id="sc-benefits" class="sc-benefits">
   <ul id="sc-benefits-list" class="sc-benefits__list">
     {% for benefit in final_benefits %}
       <li class="sc-benefits__item">{{ benefit }}</li>
     {% endfor %}
   </ul>
-</div>
+</div> {% endcomment %}
 
 <div id="sc-loop" class="__sc-loop-hide">
   {% render loop_subscriptions_block %}
