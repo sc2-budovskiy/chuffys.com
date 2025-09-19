@@ -487,38 +487,59 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
-    function getVariantPrices(product) {
-      const formatPrice = (price) => `$${(price / 100).toFixed(2)}`;
+    
+    function getVariantPricesFromLoopWidget() {
+      console.log(`%c function getVariantPricesFromLoopWidget() {`, `color: red; font-weight:bold; background-color: yellow;`);
 
-      // Створюємо мапу планів: id → name
+      const formatPrice = (p) => (p == null ? null : `$${(p / 100).toFixed(2)}`);
+
+      // Найперше — дістати product з window.LOOP_WIDGET (саме звідти твій productObject)
+      if (!window?.LOOP_WIDGET || Object.keys(window.LOOP_WIDGET).length === 0) {
+        // нічого не знайдено
+        return {};
+      }
+
+      const product = Object.values(window.LOOP_WIDGET)[0].product;
+      if (!product) return {};
+
+      // Побудуємо мапи: sellingPlanId -> planName, sellingPlanId -> groupName
       const sellingPlanNames = {};
+      const sellingPlanGroupNames = {};
       (product.selling_plan_groups || []).forEach(group => {
+        const groupName = group.name || null;
         (group.selling_plans || []).forEach(plan => {
-          sellingPlanNames[plan.id] = plan.name;
+          sellingPlanNames[plan.id] = plan.name || null;
+          sellingPlanGroupNames[plan.id] = groupName;
         });
       });
 
-      return product.variants.reduce((acc, variant) => {
-        acc[variant.id] = {
+      // Тепер формуємо результат по варіантах
+      const result = {};
+      (product.variants || []).forEach(variant => {
+        result[variant.id] = {
+          id: variant.id,
+          title: variant.title,
           basePrice: formatPrice(variant.price),
-          compareAtPrice: variant.compare_at_price
-            ? formatPrice(variant.compare_at_price)
-            : null,
-          sellingPlans: (variant.selling_plan_allocations || []).map(plan => ({
-            price: formatPrice(plan.price),
-            compareAtPrice: plan.compare_at_price
-              ? formatPrice(plan.compare_at_price)
-              : null,
-            perDeliveryPrice: formatPrice(plan.per_delivery_price),
-            sellingPlanId: plan.selling_plan_id,
-            sellingPlanGroupId: plan.selling_plan_group_id,
-            name: sellingPlanNames[plan.selling_plan_id] || null, // ← додаємо назву
+          compareAtPrice: variant.compare_at_price ? formatPrice(variant.compare_at_price) : null,
+          sellingPlans: (variant.selling_plan_allocations || []).map(allocation => ({
+            sellingPlanId: allocation.selling_plan_id,
+            sellingPlanGroupId: allocation.selling_plan_group_id,
+            name: sellingPlanNames[allocation.selling_plan_id] || null,       // назва плану, наприклад "Deliver every 3 months"
+            groupName: sellingPlanGroupNames[allocation.selling_plan_id] || null, // назва групи (наприклад "Subscribe and Save test")
+            price: formatPrice(allocation.price),
+            compareAtPrice: allocation.compare_at_price ? formatPrice(allocation.compare_at_price) : null,
+            perDeliveryPrice: allocation.per_delivery_price != null ? formatPrice(allocation.per_delivery_price) : null,
+            priceAdjustments: (allocation.price_adjustments || []).map(adj => ({
+              position: adj.position,
+              price: formatPrice(adj.price)
+            }))
           }))
         };
+      });
 
-        return acc;
-      }, {});
+      return result;
     }
+
 
 
 
@@ -713,7 +734,7 @@
       if(loopContainer){
         // loopContainer.classList.remove('sc-loop-hide');
 
-        const variantPrices = getProductVariantPrices();
+        const variantPrices = getVariantPricesFromLoopWidget();
         console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
         console.dir(variantPrices);
 
