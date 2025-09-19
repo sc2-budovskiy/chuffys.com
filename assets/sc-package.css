@@ -443,7 +443,25 @@
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 389.99px) {
+@media screen and (min-width: 376px) and (max-width: 389.99px) {
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col2, 
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col3 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 375.99px) {
+    .sc-benefits ul.sc-benefits__list li {
+        padding-left: 6px;
+        font-size: 14px;
+    }
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         display: flex;
         flex-direction: column;
