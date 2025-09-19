@@ -266,6 +266,9 @@
     .sc-benefits ul.sc-benefits__list li {
         font-size: 14px;
     }
+    .sc-benefits .sc-benefits__list {
+        padding: 0 0 0 12px;
+    }
 }
 
 @media screen and (min-width: 1171px) and (max-width: 1019.99px) {
@@ -275,6 +278,9 @@
     .sc-benefits ul.sc-benefits__list li {
         font-size: 14px;
     }
+    .sc-benefits .sc-benefits__list {
+        padding: 0 0 0 12px;
+    }
 }
 
 @media screen and (min-width: 1121px) and (max-width: 1170.99px) {
@@ -283,6 +289,9 @@
     }
     .sc-benefits ul.sc-benefits__list li {
         font-size: 14px;
+    }
+    .sc-benefits .sc-benefits__list {
+        padding: 0 0 0 12px;
     }
 }
 
@@ -298,11 +307,15 @@
         align-items: center;
         justify-content: flex-start;
     }
-
     .sc-benefits ul.sc-benefits__list li {
         font-size: 14px;
     }
+    .sc-benefits .sc-benefits__list {
+        padding: 0 0 0 12px;
+    }
 }
+
+
 
 @media screen and (min-width: 375px) and (max-width: 450px) {
     .sc-package__wrapper {
