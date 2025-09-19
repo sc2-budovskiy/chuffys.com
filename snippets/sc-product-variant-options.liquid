@@ -217,7 +217,7 @@
       {% assign recommended = currentVariant.metafields.custom.recommended.value %}
 
 
-      <label class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+      <label id="sc-amount-label--{{ currentVariant.id }}" class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         {% if popular != blank %}
           <div class="sc-amount__popular">{{ popular }}</div>
         {% elsif recommended != blank %}
@@ -540,6 +540,62 @@
       return result;
     }
 
+    function loopVariantsAndSetSubscribePrices(){
+      const variantPrices = getVariantPricesFromLoopWidget();
+      // console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
+      // console.dir(variantPrices);
+
+      function getSupplyPeriod(title) {
+        return title.split('/')[1].trim();
+      }
+
+      function loopSellingPlansAndSetVariantPrice(variantId, variantTitle, sellingPlans){
+        // Find radio by variantId
+        // const radio = document.querySelector(`input[name="Amount"][data-variant_id="${variantId}"]`);
+        const label = document.getElementById(`sc-amount-label--${variantId}`);
+        if(label){
+          console.log('label found:', label);
+
+          // Find selling plan by supply period
+          const supplyPeriod = getSupplyPeriod(variantTitle);
+          const sellingPlan = sellingPlans.find(plan => plan.name.includes(supplyPeriod));
+          if(sellingPlan){
+            console.log('sellingPlan found:', sellingPlan);
+
+            // Set price to radio data attribute
+            const priceBlock = label.querySelector('.sc-package__value-price');
+            if(priceBlock){
+              priceBlock.innerText = sellingPlan.price;
+              console.log('label set subscribe_price:', sellingPlan.price);
+            }
+            
+          } else {
+            console.log('sellingPlan not found for supplyPeriod:', supplyPeriod);
+            console.dir(`sellingPlans`);console.dir(sellingPlans);
+          }
+        } else {
+          console.log('Label not found for variantId:', variantId);
+        }
+      }
+
+      //Loop variants
+      for (const variantId in variantPrices) {
+        const variantTitle = data[variantId].title;
+        const sellingPlans = data[variantId].sellingPlans.map(plan => ({
+          sellingPlanId: plan.sellingPlanId,
+          name: plan.name,
+          price: plan.price
+        }));
+        console.log('variantId:', variantId);
+        console.log('supplyPeriod:', variantTitle);
+        console.log('sellingPlans:', sellingPlans);
+
+        loopSellingPlansAndSetVariantPrice(variantId, variantTitle, sellingPlans);
+      }
+
+      
+    }
+
 
 
 
@@ -734,12 +790,7 @@
       if(loopContainer){
         // loopContainer.classList.remove('sc-loop-hide');
 
-        const variantPrices = getVariantPricesFromLoopWidget();
-        console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
-        console.dir(variantPrices);
-
-        
-        
+        loopVariantsAndSetSubscribePrices();
 
         subscribeSelectorEvent(() => {
           console.log(`%c showLoop Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
