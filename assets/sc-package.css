@@ -147,6 +147,17 @@
     color: #555;
 }
 
+.sc-package__amount label .sc-package__value-block-row2 {
+    padding-top: 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.sc-package__amount label:has(input:checked) .sc-package__value-block-row2 {
+    max-height:1000px;
+}
+
+
 .sc-benefits .sc-benefits__list {
     margin: 0;
     padding: 0 0 0 16px;
