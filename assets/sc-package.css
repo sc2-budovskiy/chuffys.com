@@ -151,7 +151,7 @@
     padding-top: 4px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    /* transition: max-height 0.3s ease-out; */
 }
 .sc-package__amount label:has(input:checked) .sc-package__value-block-row2 {
     max-height:1000px;
