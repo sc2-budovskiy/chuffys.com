@@ -487,6 +487,22 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
+
+    function labelsSetDefaultPrices(){
+      console.log(`%c function looAmountLabelsAndSetDefaultPrices() {`, `color: red; font-weight:bold; background-color: yellow;`);
+
+      const amountLabels = document.querySelectorAll('.sc-amount-label');
+      amountLabels.forEach(label => {
+        const input = label.querySelector('input[name="Amount"]');
+        const price = input.dataset.price;
+        const labelPriceBlock = label.querySelector('.sc-package__value-price');
+        if(labelPriceBlock){
+          labelPriceBlock.innerText = price;
+          console.log('label set default price:', price);
+        }
+      });
+    }
+
     
     function getVariantPricesFromLoopWidget() {
       console.log(`%c function getVariantPricesFromLoopWidget() {`, `color: red; font-weight:bold; background-color: yellow;`);
@@ -824,6 +840,8 @@
       const oneTimePriceBlock = oneTimeWidget.querySelector('.loop-widget-purchase-option-price');
       const oneTimePrice = oneTimePriceBlock ? oneTimePriceBlock.innerText : 'price undefined';
       priceButtonText.innerText = `• ${oneTimePrice}`;
+
+      labelsSetDefaultPrices();
 
       if(loopContainer){
         // loopContainer.classList.add('sc-loop-hide');
