@@ -251,7 +251,6 @@
     overflow: hidden;
 }
 #sc-loop.sc-loop-hide {
-    max-height: 0;
     position:absolute;
     left:-9999px;
     top:-9999px;
