@@ -395,7 +395,10 @@
         gap: 6px;
         width: 100%;
     }
-    
+    .sc-benefits ul.sc-benefits__list li {
+        font-size: 14px;
+    }
+
     .sc-package__wrapper {
         padding: 20px;
     }
