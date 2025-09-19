@@ -696,6 +696,10 @@
 
       const oneTimeWidget = document.querySelector('.loop-widget-purchase-option-onetime');
       oneTimeWidget.click();
+      const priceButtonText = document.getElementById('sc-button-text');
+      const oneTimePriceBlock = oneTimeWidget.querySelector('.loop-widget-purchase-option-price');
+      const oneTimePrice = oneTimePriceBlock ? oneTimePriceBlock.innerText : 'price undefined';
+      priceButtonText.innerText = `• ${oneTimePrice}`;
 
       if(loopContainer){
         // loopContainer.classList.add('sc-loop-hide');
