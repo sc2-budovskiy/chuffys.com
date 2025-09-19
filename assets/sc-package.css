@@ -296,6 +296,10 @@
 }
 
 @media screen and (min-width: 750px) and (max-width: 1120.99px) {
+    .sc-package .product-form__input {
+        margin: 0 0 1.5rem;
+    }
+    
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         display: flex;
         flex-direction: column;
@@ -354,6 +358,10 @@
 }
 
 @media screen and (min-width: 420px) and (max-width: 450.99px) {
+    .sc-package .product-form__input {
+        margin: 0 0 1.5rem;
+    }
+    
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         display: grid;
         grid-template-columns: 1.5fr 1fr 0.6fr;
@@ -399,6 +407,10 @@
 }
 
 @media screen and (min-width: 390px) and (max-width: 419.99px) {
+    .sc-package .product-form__input {
+        margin: 0 0 1.5rem;
+    }
+
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         display: grid;
         grid-template-columns: 1.5fr 1fr 0.6fr;
@@ -444,6 +456,10 @@
 }
 
 @media screen and (min-width: 376px) and (max-width: 389.99px) {
+    .sc-package .product-form__input {
+        margin: 0 0 1.5rem;
+    }
+
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         display: flex;
         flex-direction: column;
@@ -462,6 +478,10 @@
 }
 
 @media screen and (min-width: 100px) and (max-width: 375.99px) {
+    .sc-package .product-form__input {
+        margin: 0 0 1.5rem;
+    }
+
     .sc-benefits ul.sc-benefits__list li {
         padding-left: 6px;
         font-size: 14px;
