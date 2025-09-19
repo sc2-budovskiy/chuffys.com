@@ -496,7 +496,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.555 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.666 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const loopContainer = document.getElementById('sc-loop');
@@ -585,6 +585,7 @@
           pricePerItemBlock.innerText = price_per_item_string;
         }
 
+
         const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
         const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
         if(discountBlock){
@@ -672,21 +673,7 @@
         
         const selectedRadio = document.querySelector('input[name="Amount"]:checked');
         const variantId = selectedRadio ? selectedRadio.dataset.variant_id : null;
-        const currentBenefits = variantId ? document.getElementById(`sc-benefits--${variantId}`) : null;
-
-        if(selectedRadio){
-          const benefits_html = selectedRadio.dataset.benefits_html;
-          const subscribe_benefits_html = selectedRadio.dataset.subscribe_benefits_html;
-
-          if(show_loop.checked){
-            currentBenefits.innerHTML = subscribe_benefits_html;
-          }
-          else {
-            currentBenefits.innerHTML = benefits_html;
-          }
-        }
-        
-
+       
         //Set Dynamic Price on submit button
         // if(show_loop.checked){
           // console.log(`%c if(show_loop.checked){`, `color: red; font-weight:bold; background-color: yellow;`);
@@ -759,14 +746,12 @@
       const monthNumber = parseInt(value.match(/\d+/)[0]);
 
       const variantId = selected.dataset.variant_id;
-      const currentBenefits = variantId ? document.getElementById(`sc-benefits--${variantId}`) : null;
-
 
       const benefits_html = selected.dataset.benefits_html;
       const subscribe_benefits_html = selected.dataset.subscribe_benefits_html;
 
 
-      if(currentBenefits){
+      
         if(show_loop.checked){
           // Subscriptions Loop is shown
           const loop_widget_sp_selector = document.querySelector('.loop-widget-sp-selector');
@@ -776,8 +761,6 @@
           console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
           console.dir(selectedText);
 
-          currentBenefits.innerHTML = subscribe_benefits_html;
-
           subscribeSelectorEvent(() => {
             console.log(`%c Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
             const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
@@ -785,11 +768,8 @@
             subscribeSelectElement.dispatchEvent(new Event("change"));
           });
 
-        } else {
-          // Subscriptions Loop is hidden
-          currentBenefits.innerHTML = benefits_html;
-        }
-      }
+        } 
+      
 
       //Set Dynamic Price on submit button 
       const priceButtonText = document.getElementById('sc-button-text');
@@ -830,16 +810,33 @@
     });
 
 
+    function setBenefits(isSubscribe){
+      const labels = document.querySelectorAll('.sc-amount-label');
+      labels.forEach(label => {
+        const input = label.querySelector('input[name="Amount"]');
+        const currentBenefits = label.querySelector(`.sc-benefits`);
+        if(currentBenefits){
+          const benefits_html = input.dataset.benefits_html;
+          const subscribe_benefits_html = input.dataset.subscribe_benefits_html;
+          if(isSubscribe){
+            currentBenefits.innerHTML = subscribe_benefits_html;
+          } else {
+            currentBenefits.innerHTML = benefits_html;
+          }
+        }
+      });
+    }
 
 
     function showLoop(){
       console.log(`%c showLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
+      setBenefits(true);
+
       if(loopContainer){
-        // loopContainer.classList.remove('sc-loop-hide');
 
         loopVariantsAndSetSubscribePrices();
-
+        
         subscribeSelectorEvent(() => {
           console.log(`%c showLoop Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
           const selectedRadio = document.querySelector('input[name="Amount"]:checked');
@@ -856,6 +853,8 @@
     function hideLoop(){
       console.log(`%c function hideLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
+      setBenefits(false);
+
       //Set button price by one-time widget
       const oneTimeWidget = document.querySelector('.loop-widget-purchase-option-onetime');
       oneTimeWidget.click();
@@ -865,10 +864,6 @@
       priceButtonText.innerText = `• ${oneTimePrice}`;
 
       labelsSetDefaultPrices();
-
-      if(loopContainer){
-        // loopContainer.classList.add('sc-loop-hide');
-      }
     }
 
     //Show/Hide Loop
