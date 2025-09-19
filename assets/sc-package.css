@@ -97,6 +97,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width:100%;
 }
 
 .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
