@@ -255,9 +255,16 @@
 }
 
 
-
+@media screen and (min-width: 1020.99px) and (max-width: 1292px) {
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+}
 
 @media screen and (min-width: 750px) and (max-width: 1020px) {
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
     .sc-package__wrapper {
         padding: 15px;
     }
