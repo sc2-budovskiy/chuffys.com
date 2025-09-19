@@ -354,6 +354,16 @@
 }
 
 @media screen and (min-width: 420px) and (max-width: 430.99px) {
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 0.6fr;
+        gap: 6px;
+        width: 100%;
+    }
+    .sc-benefits ul.sc-benefits__list li {
+        font-size: 14px;
+    }
+    
     .sc-package__wrapper {
         padding: 20px;
     }
