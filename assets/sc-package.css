@@ -264,7 +264,7 @@
         display: flex;
         gap: 5px;
     }
-    .sc-package .sc-package__amount label {
+    .sc-package .sc-package__amount label:not(.sc-switch) {
         gap: 5px;
         padding: 20px 10px 20px 10px;
     }
@@ -314,7 +314,7 @@
         display: flex;
         gap: 5px;
     }
-    .sc-package .sc-package__amount label {
+    .sc-package .sc-package__amount label:not(.sc-switch) {
         gap: 5px;
         padding: 20px 10px 20px 10px;
     }
