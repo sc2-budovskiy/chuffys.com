@@ -479,7 +479,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.444 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.555 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -497,6 +497,7 @@
         if(labelPriceBlock){
           labelPriceBlock.innerText = price;
         }
+        setLabelDiscount(label, price);
       });
     }
 
@@ -553,12 +554,20 @@
       return result;
     }
 
-    function loopVariantsAndSetSubscribePrices(){
-      const variantPrices = getVariantPricesFromLoopWidget();
-      // console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
-      // console.dir(variantPrices);
+    function setLabelDiscount(label, priceString){
+        const discountBlock = label.querySelector('.sc-package__value-save');
+        const price = parseFloat(priceString.replace(/[^0-9.-]+/g,""));
+        const compare_at_price_string = label.querySelector('input[name="Amount"]').dataset.compare_at_price;
+        const compare_at_price = parseFloat(compare_at_price_string.replace(/[^0-9.-]+/g,""));
 
-      function getSellingPlaneName(title) {
+        const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
+        const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
+        if(discountBlock){
+          discountBlock.innerText = saveString;
+        }
+    }
+
+    function getSellingPlaneName(title) {
         const supplyPeriod = title.split('/')[1].trim().toLowerCase();
         if(supplyPeriod.includes('1 month supply')){
           return 'Deliver every month';
@@ -569,24 +578,12 @@
         } else {
           return null;
         }
-      }
+    }
 
-      function setLabelDiscount(label, priceString){
-        console.log(`%c function setLabelDiscount(label, priceString){`, `color: red; font-weight:bold; background-color: yellow;`);
-
-        const discountBlock = label.querySelector('.sc-package__value-save');
-        const price = parseFloat(priceString.replace(/[^0-9.-]+/g,""));
-        const compare_at_price_string = label.querySelector('input[name="Amount"]').dataset.compare_at_price;
-        const compare_at_price = parseFloat(compare_at_price_string.replace(/[^0-9.-]+/g,""));
-
-        const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
-        const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
-        if(discountBlock){
-          console.log(`%c if(discountBlock){`, `color: red; font-weight:bold; background-color: yellow;`);
-
-          discountBlock.innerText = saveString;
-        }
-      }
+    function loopVariantsAndSetSubscribePrices(){
+      const variantPrices = getVariantPricesFromLoopWidget();
+      // console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
+      // console.dir(variantPrices);
 
       function loopSellingPlansAndSetVariantPrice(variantId, variantTitle, sellingPlans){
         // Find radio by variantId
