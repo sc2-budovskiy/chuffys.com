@@ -237,6 +237,16 @@
         {%- endcapture -%}
 
 
+        {% assign subscribe_benefits = currentVariant.metafields.custom.subscribe_benefits.value %}
+        {%- capture subscribe_benefits_html -%}
+          <ul id="sc-benefits-list--{{ currentVariant.id }}" class="sc-benefits__list">
+            {%- for benefit in subscribe_benefits -%}
+              <li class="sc-benefits__item">{{ benefit }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endcapture -%}
+
+      {% comment %}
         {% assign one_month_benefits = currentVariant.metafields.custom.one_month_benefits.value %}
         {%- capture one_month_benefits_html -%}
           <ul id="sc-benefits-list--{{ currentVariant.id }}" class="sc-benefits__list">
@@ -262,7 +272,8 @@
               <li class="sc-benefits__item">{{ benefit }}</li>
             {%- endfor -%}
           </ul>
-        {%- endcapture -%}
+        {%- endcapture -%} 
+      {% endcomment %}
 
 
         <div class="sc-package__input-block">
@@ -276,9 +287,7 @@
             data-section_id="{{ section.id }}"
             data-product_handle="{{ product.handle }}"
             data-benefits_html="{{ benefits_html | strip_newlines | escape }}"
-            data-one_month_benefits_html="{{ one_month_benefits_html | strip_newlines | escape }}"
-            data-two_month_benefits_html="{{ two_month_benefits_html | strip_newlines | escape }}"
-            data-three_month_benefits_html="{{ three_month_benefits_html | strip_newlines | escape }}"
+            data-subscribe_benefits_html="{{ subscribe_benefits_html | strip_newlines | escape }}"
             data-price="{{ currentVariant.price | money }}"
             data-compare_at_price="{{ currentVariant.compare_at_price | money }}"
             data-price_per_item="{{ price_per_item }}"
@@ -309,7 +318,7 @@
           </div>
 
           <div class="sc-package__value-block-row2">
-            <div id="sc-benefits" class="sc-benefits">
+            <div id="sc-benefits--{{ currentVariant.id }}" class="sc-benefits">
               {{ benefits_html }}
             </div>
           </div>
@@ -473,13 +482,13 @@
   </div>
 </div>
 
-<div id="sc-benefits" class="sc-benefits">
+{% comment %} <div id="sc-benefits" class="sc-benefits">
   <ul id="sc-benefits-list" class="sc-benefits__list">
     {% for benefit in final_benefits %}
       <li class="sc-benefits__item">{{ benefit }}</li>
     {% endfor %}
   </ul>
-</div> 
+</div>  {% endcomment %}
 
 <div id="sc-loop" class="__sc-loop-hide">
   {% render loop_subscriptions_block %}
@@ -490,7 +499,6 @@
     console.log(`%c ### sc-product-variant-options.liquid v0.555 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
-    const currentBenefits = document.getElementById('sc-benefits');
     const loopContainer = document.getElementById('sc-loop');
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
@@ -658,28 +666,26 @@
     function handleSelectChange(event, selectElement) {
         console.log(`%c function handleSelectChange(event, selectElement) {`, `color: red; font-weight:bold; background-color: yellow;`);
         
-        console.log('Значення селекту змінилося:', event.target.value);
+        console.log('Значення селекту підписки змінилося:', event.target.value);
         const selectedText = event.target.options[event.target.selectedIndex].text;
-        console.log('Текст вибраної опції:', selectedText);
+        console.log('Текст вибраної опції підписки:', selectedText);
+        
+        const selectedRadio = document.querySelector('input[name="Amount"]:checked');
+        const variantId = selectedRadio ? selectedRadio.dataset.variant_id : null;
+        const currentBenefits = variantId ? document.getElementById(`sc-benefits--${variantId}`) : null;
 
-        if(currentBenefits){
-          const selectedRadio = document.querySelector('input[name="Amount"]:checked');
-          if(selectedRadio){
-            const one_month_benefits_html = selectedRadio.dataset.one_month_benefits_html;
-            const two_month_benefits_html = selectedRadio.dataset.two_month_benefits_html;
-            const three_month_benefits_html = selectedRadio.dataset.three_month_benefits_html;
+        if(selectedRadio){
+          const benefits_html = selectedRadio.dataset.benefits_html;
+          const subscribe_benefits_html = selectedRadio.dataset.subscribe_benefits_html;
 
-            if(selectedText.includes('every month')){
-              currentBenefits.innerHTML = one_month_benefits_html;
-            } else if(selectedText.includes('every 2 months')){
-              currentBenefits.innerHTML = two_month_benefits_html;
-            } else if(selectedText.includes('every 3 months')){
-              currentBenefits.innerHTML = three_month_benefits_html;
-            } else {
-              currentBenefits.innerHTML = one_month_benefits_html;
-            }
+          if(show_loop.checked){
+            currentBenefits.innerHTML = subscribe_benefits_html;
+          }
+          else {
+            currentBenefits.innerHTML = benefits_html;
           }
         }
+        
 
         //Set Dynamic Price on submit button
         // if(show_loop.checked){
@@ -752,17 +758,12 @@
       const value = selected.value;
       const monthNumber = parseInt(value.match(/\d+/)[0]);
 
+      const variantId = selected.dataset.variant_id;
+      const currentBenefits = variantId ? document.getElementById(`sc-benefits--${variantId}`) : null;
+
+
       const benefits_html = selected.dataset.benefits_html;
-
-      const one_month_benefits_html = selected.dataset.one_month_benefits_html;
-      const two_month_benefits_html = selected.dataset.two_month_benefits_html;
-      const three_month_benefits_html = selected.dataset.three_month_benefits_html;
-
-      // const subscribeSelectElement = document.querySelector('select[name="selling_plan"]');
-      // console.dir(`subscribeSelectElement:`);console.dir(subscribeSelectElement);
-      // // subscribeSelectElement.value = "Deliver every 3 months";
-      // subscribeSelectElement.selectedIndex = monthNumber - 1;
-      // subscribeSelectElement.dispatchEvent(new Event("change"));
+      const subscribe_benefits_html = selected.dataset.subscribe_benefits_html;
 
 
       if(currentBenefits){
@@ -775,15 +776,7 @@
           console.log(`%c selectedText`, `color: red; font-weight:bold; background-color: yellow;`);
           console.dir(selectedText);
 
-          if(selectedText.includes('every month')){
-            currentBenefits.innerHTML = one_month_benefits_html;
-          } else if(selectedText.includes('every 2 months')){
-            currentBenefits.innerHTML = two_month_benefits_html;
-          } else if(selectedText.includes('every 3 months')){
-            currentBenefits.innerHTML = three_month_benefits_html;
-          } else {
-            currentBenefits.innerHTML = one_month_benefits_html;
-          }
+          currentBenefits.innerHTML = subscribe_benefits_html;
 
           subscribeSelectorEvent(() => {
             console.log(`%c Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
@@ -806,7 +799,6 @@
         const simpleSelectedVariantPrice = selected.dataset.price;
         priceButtonText.innerText = `• ${simpleSelectedVariantPrice}`;
       }
-
 
     }
 
