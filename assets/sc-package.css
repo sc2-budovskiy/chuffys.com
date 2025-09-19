@@ -448,6 +448,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        gap:7px;
+    }
+    .sc-package__amount label .sc-package__value-block-row2 {
+        padding-top: 7px;
     }
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col2, 
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col3 {
@@ -466,6 +470,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        gap:7px;
+    }
+    .sc-package__amount label .sc-package__value-block-row2 {
+        padding-top: 7px;
     }
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col2, 
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col3 {
@@ -475,40 +483,3 @@
     }
 }
 
-/* 
-@media screen and (min-width: 100px) and (max-width: 374.99px) {
-    .sc-package__wrapper {
-        padding: 15px;
-    }
-    .sc-package .product-form__input {
-        margin: 0 0 1.5rem;
-    }
-	.sc-package .sc-package__amount label .sc-package__value-block {
-        display: flex;
-        gap: 5px;
-    }
-
-    .sc-package .sc-package__amount label:not(.sc-switch) {
-        gap: 5px;
-        padding: 20px 10px 20px 10px;
-    }
-    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-save {
-        font-size: 12px;
-        padding: 5px 5px;
-    }
-    .sc-package .sc-package__value-row1 {
-        font-size: 15px;
-    }
-    .sc-package__value-row2 {
-        font-size: 13px;
-    }
-    .sc-package .product-form__input.product-form__input--amount input[type=radio] {
-        height: 18px;
-        width: 18px;
-    }
-    .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
-        padding: 12px 18px;
-        font-size: 13px;
-    }
-} 
-*/
