@@ -253,7 +253,6 @@
 #sc-loop.sc-loop-hide {
     max-height: 0;
     position:absolute;
-    visibility: hidden;
     left:-9999px;
     top:-9999px;
 }
