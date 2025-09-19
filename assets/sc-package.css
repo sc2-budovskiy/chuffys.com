@@ -276,9 +276,20 @@
 
 @media screen and (min-width: 750px) and (max-width: 1120.99px) {
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
-        grid-template-columns: 1.5fr 1fr 0.6fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
-    .sc-package__wrapper {
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col2, 
+    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-col3 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+
+
+    /* .sc-package__wrapper {
         padding: 15px;
     }
 	.sc-package .sc-package__amount label .sc-package__value-block {
@@ -286,7 +297,7 @@
         gap: 5px;
     }
     .sc-package .sc-package__amount label:not(.sc-switch) {
-        gap: 5px;
+        gap: 8px;
         padding: 20px 10px 20px 10px;
     }
     .template-suffix--sc-flow .product__info-wrapper {
@@ -303,13 +314,14 @@
         font-size: 13px;
     }
     .sc-package .product-form__input.product-form__input--amount input[type=radio] {
-        height: 18px;
-        width: 18px;
+        height: 20px;
+        width: 20px;
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
         padding: 12px 18px;
         font-size: 13px;
-    }
+    } */
+
 }
 
 @media screen and (min-width: 375px) and (max-width: 450px) {
