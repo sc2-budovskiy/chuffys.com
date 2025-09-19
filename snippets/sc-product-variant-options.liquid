@@ -503,6 +503,10 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
+    function formatCurrencyString(currencyString) {
+      // Видаляємо всі буквені символи (a-z, A-Z), залишаємо цифри, крапку та не-буквені символи (наприклад, $, €)
+      return currencyString.replace(/[a-zA-Z]/g, '');
+    }
 
     function labelsSetDefaultPrices(){
       const amountLabels = document.querySelectorAll('.sc-amount-label');
@@ -686,7 +690,7 @@
             
             const priceButtonText = document.getElementById('sc-button-text');
 
-            const loopSelectedPrice = loopSelectedPriceElement ? loopSelectedPriceElement.innerText : 'price undefined';
+            const loopSelectedPrice = loopSelectedPriceElement ? formatCurrencyString(loopSelectedPriceElement.innerText) : 'price undefined';
             console.log(`%c loopSelectedPrice`, `color: red; font-weight:bold; background-color: yellow;`);
             console.dir(loopSelectedPrice);
 
@@ -776,7 +780,7 @@
       if(show_loop.checked){
         // Subscriptions Loop is shown
       } else {
-        const simpleSelectedVariantPrice = selected.dataset.price;
+        const simpleSelectedVariantPrice = formatCurrencyString(selected.dataset.price);
         priceButtonText.innerText = `• ${simpleSelectedVariantPrice}`;
       }
 
@@ -860,7 +864,7 @@
       oneTimeWidget.click();
       const priceButtonText = document.getElementById('sc-button-text');
       const oneTimePriceBlock = oneTimeWidget.querySelector('.loop-widget-purchase-option-price');
-      const oneTimePrice = oneTimePriceBlock ? oneTimePriceBlock.innerText : 'price undefined';
+      const oneTimePrice = oneTimePriceBlock ? formatCurrencyString(oneTimePriceBlock.innerText) : 'price undefined';
       priceButtonText.innerText = `• ${oneTimePrice}`;
 
       labelsSetDefaultPrices();
