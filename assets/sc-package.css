@@ -263,17 +263,26 @@
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         grid-template-columns: 1.5fr 1fr 0.6fr;
     }
+    .sc-benefits ul.sc-benefits__list li {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 1171px) and (max-width: 1019.99px) {
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         grid-template-columns: 1.5fr 1fr 0.6fr;
     }
+    .sc-benefits ul.sc-benefits__list li {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 1121px) and (max-width: 1170.99px) {
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
         grid-template-columns: 1.5fr 1fr 0.6fr;
+    }
+    .sc-benefits ul.sc-benefits__list li {
+        font-size: 14px;
     }
 }
 
@@ -290,41 +299,9 @@
         justify-content: flex-start;
     }
 
-
-
-    /* .sc-package__wrapper {
-        padding: 15px;
+    .sc-benefits ul.sc-benefits__list li {
+        font-size: 14px;
     }
-	.sc-package .sc-package__amount label .sc-package__value-block {
-        display: flex;
-        gap: 5px;
-    }
-    .sc-package .sc-package__amount label:not(.sc-switch) {
-        gap: 8px;
-        padding: 20px 10px 20px 10px;
-    }
-    .template-suffix--sc-flow .product__info-wrapper {
-        padding: 0 0 0 2rem !important;
-    }
-    .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-save {
-        font-size: 12px;
-        padding: 5px 5px;
-    }
-    .sc-package .sc-package__value-row1 {
-        font-size: 15px;
-    }
-    .sc-package__value-row2 {
-        font-size: 13px;
-    }
-    .sc-package .product-form__input.product-form__input--amount input[type=radio] {
-        height: 20px;
-        width: 20px;
-    }
-    .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
-        padding: 12px 18px;
-        font-size: 13px;
-    } */
-
 }
 
 @media screen and (min-width: 375px) and (max-width: 450px) {
