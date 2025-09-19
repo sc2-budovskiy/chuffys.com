@@ -258,13 +258,13 @@
 
 @media screen and (min-width: 1020px) and (max-width: 1292px) {
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
-        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 0.6fr;
     }
 }
 
 @media screen and (min-width: 1171px) and (max-width: 1019.99px) {
     .sc-package .sc-package__amount label .sc-package__value-block .sc-package__value-block-row1 {
-        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 0.6fr;
     }
 }
 
