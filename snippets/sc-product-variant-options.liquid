@@ -479,7 +479,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.222 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.333 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -545,8 +545,17 @@
       // console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
       // console.dir(variantPrices);
 
-      function getSupplyPeriod(title) {
-        return title.split('/')[1].trim();
+      function getSellingPlaneName(title) {
+        const supplyPeriod = title.split('/')[1].trim().toLowerCase();
+        if(supplyPeriod.includes('1 month supply')){
+          return 'Deliver every month';
+        } else if(supplyPeriod.includes('2 month supply')){
+          return 'Deliver every 2 months';
+        } else if(supplyPeriod.includes('3 month supply')){
+          return 'Deliver every 3 months';
+        } else {
+          return null;
+        }
       }
 
       function loopSellingPlansAndSetVariantPrice(variantId, variantTitle, sellingPlans){
@@ -557,8 +566,8 @@
           console.log('label found:', label);
 
           // Find selling plan by supply period
-          const supplyPeriod = getSupplyPeriod(variantTitle);
-          const sellingPlan = sellingPlans.find(plan => plan.name.includes(supplyPeriod));
+          const sellingPlaneName = getSellingPlaneName(variantTitle);
+          const sellingPlan = sellingPlans.find(plan => plan.name.includes(sellingPlaneName));
           if(sellingPlan){
             console.log('sellingPlan found:', sellingPlan);
 
@@ -570,7 +579,7 @@
             }
             
           } else {
-            console.log('sellingPlan not found for supplyPeriod:', supplyPeriod);
+            console.log('sellingPlan not found for sellingPlaneName:', sellingPlaneName);
             console.dir(`sellingPlans`);console.dir(sellingPlans);
           }
         } else {
@@ -587,7 +596,7 @@
           price: plan.price
         }));
         console.log('variantId:', variantId);
-        console.log('supplyPeriod:', variantTitle);
+        console.log('variantTitle:', variantTitle);
         console.log('sellingPlans:', sellingPlans);
 
         loopSellingPlansAndSetVariantPrice(variantId, variantTitle, sellingPlans);
