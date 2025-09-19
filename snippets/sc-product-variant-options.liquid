@@ -560,6 +560,15 @@
         const compare_at_price_string = label.querySelector('input[name="Amount"]').dataset.compare_at_price;
         const compare_at_price = parseFloat(compare_at_price_string.replace(/[^0-9.-]+/g,""));
 
+        //Set one chew price
+        const chews = label.querySelector('input[name="Amount"]').dataset.chews;
+        const price_per_item = (price / chews).toFixed(2);
+        const price_per_item_string = `$${price_per_item} / chew`;
+        const pricePerItemBlock = label.querySelector('.sc-package__value-row2');
+        if(pricePerItemBlock){
+          pricePerItemBlock.innerText = price_per_item_string;
+        }
+
         const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
         const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
         if(discountBlock){
