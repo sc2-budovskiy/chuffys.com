@@ -487,6 +487,31 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
+    function getProductVariantPrices() {
+      console.log(`%c function getProductVariantPrices() {`, `color: red; font-weight:bold; background-color: yellow;`);
+      
+      if (!window.LOOP_WIDGET) return {
+        console.log(`%c if (!window.LOOP_WIDGET) return {`, `color: red; font-weight:bold; background-color: yellow;`);
+      };
+
+      const product = Object.values(window.LOOP_WIDGET)[0].product;
+
+      const result = {};
+
+      product.variants.forEach(variant => {
+        result[variant.id] = {
+          title: variant.title,
+          price: `$${(variant.price / 100).toFixed(2)}`,
+          compareAtPrice: variant.compare_at_price
+            ? `$${(variant.compare_at_price / 100).toFixed(2)}`
+            : null
+        };
+      });
+
+      return result;
+    }
+
+
     function handleSelectChange(event, selectElement) {
         console.log(`%c function handleSelectChange(event, selectElement) {`, `color: red; font-weight:bold; background-color: yellow;`);
         
@@ -678,6 +703,12 @@
       if(loopContainer){
         // loopContainer.classList.remove('sc-loop-hide');
 
+        // Виклик:
+        const variantPrices = getProductVariantPrices();
+        console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
+        console.dir(variantPrices);
+        
+
         subscribeSelectorEvent(() => {
           console.log(`%c showLoop Callback subscribeSelectorEvent(() => {`, `color: red; font-weight:bold; background-color: yellow;`);
           const selectedRadio = document.querySelector('input[name="Amount"]:checked');
@@ -694,6 +725,7 @@
     function hideLoop(){
       console.log(`%c function hideLoop(){`, `color: red; font-weight:bold; background-color: yellow;`);
 
+      //Set button price by one-time widget
       const oneTimeWidget = document.querySelector('.loop-widget-purchase-option-onetime');
       oneTimeWidget.click();
       const priceButtonText = document.getElementById('sc-button-text');
