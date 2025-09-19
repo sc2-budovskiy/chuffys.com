@@ -479,7 +479,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.555 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.666 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -714,9 +714,11 @@
             subscribeSelectElement.dispatchEvent(new Event("change"));
           }
 
+
           const variantPrices = getProductVariantPrices();
           console.log(`%c variantPrices`, `color: red; font-weight:bold; background-color: yellow;`);
           console.dir(variantPrices);
+
 
         });
       }
