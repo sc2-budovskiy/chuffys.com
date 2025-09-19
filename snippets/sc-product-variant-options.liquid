@@ -479,7 +479,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    console.log(`%c ### sc-product-variant-options.liquid v0.666 ###`, `color: red; font-weight:bold; background-color: yellow;`);
+    console.log(`%c ### sc-product-variant-options.liquid v0.777 ###`, `color: red; font-weight:bold; background-color: yellow;`);
 
     //Change Benefits on Amount change
     const currentBenefits = document.getElementById('sc-benefits');
@@ -487,27 +487,39 @@
     const radios = document.querySelectorAll('input[name="Amount"]');
     const show_loop = document.querySelector('input[name="show_loop_checkbox"]');
 
-    function getProductVariantPrices() {
-      console.log(`%c function getProductVariantPrices() {`, `color: red; font-weight:bold; background-color: yellow;`);
-      
-      if (!window.LOOP_WIDGET) return {};
+    function getVariantPrices(product) {
+      const formatPrice = (price) => `$${(price / 100).toFixed(2)}`;
 
-      const product = Object.values(window.LOOP_WIDGET)[0].product;
-
-      const result = {};
-
-      product.variants.forEach(variant => {
-        result[variant.id] = {
-          title: variant.title,
-          price: `$${(variant.price / 100).toFixed(2)}`,
-          compareAtPrice: variant.compare_at_price
-            ? `$${(variant.compare_at_price / 100).toFixed(2)}`
-            : null
-        };
+      // Створюємо мапу планів: id → name
+      const sellingPlanNames = {};
+      (product.selling_plan_groups || []).forEach(group => {
+        (group.selling_plans || []).forEach(plan => {
+          sellingPlanNames[plan.id] = plan.name;
+        });
       });
 
-      return result;
+      return product.variants.reduce((acc, variant) => {
+        acc[variant.id] = {
+          basePrice: formatPrice(variant.price),
+          compareAtPrice: variant.compare_at_price
+            ? formatPrice(variant.compare_at_price)
+            : null,
+          sellingPlans: (variant.selling_plan_allocations || []).map(plan => ({
+            price: formatPrice(plan.price),
+            compareAtPrice: plan.compare_at_price
+              ? formatPrice(plan.compare_at_price)
+              : null,
+            perDeliveryPrice: formatPrice(plan.per_delivery_price),
+            sellingPlanId: plan.selling_plan_id,
+            sellingPlanGroupId: plan.selling_plan_group_id,
+            name: sellingPlanNames[plan.selling_plan_id] || null, // ← додаємо назву
+          }))
+        };
+
+        return acc;
+      }, {});
     }
+
 
 
     function handleSelectChange(event, selectElement) {
