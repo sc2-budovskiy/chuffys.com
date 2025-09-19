@@ -353,7 +353,7 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 439.99px) {
+@media screen and (min-width: 375px) and (max-width: 430.99px) {
     .sc-package__wrapper {
         padding: 20px;
     }
