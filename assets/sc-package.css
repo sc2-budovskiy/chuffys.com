@@ -313,6 +313,9 @@
     .sc-benefits .sc-benefits__list {
         padding: 0 0 0 12px;
     }
+    .sc-package__amount label .sc-package__value-block-row2 {
+        padding-top: 5px;
+    }
 }
 
 
