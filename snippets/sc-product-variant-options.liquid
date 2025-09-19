@@ -572,6 +572,8 @@
       }
 
       function setLabelDiscount(label, priceString){
+        console.log(`%c function setLabelDiscount(label, priceString){`, `color: red; font-weight:bold; background-color: yellow;`);
+
         const discountBlock = label.querySelector('.sc-package__value-save');
         const price = parseFloat(priceString.replace(/[^0-9.-]+/g,""));
         const compare_at_price_string = label.querySelector('input[name="Amount"]').dataset.compare_at_price;
@@ -580,6 +582,8 @@
         const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
         const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
         if(discountBlock){
+          console.log(`%c if(discountBlock){`, `color: red; font-weight:bold; background-color: yellow;`);
+
           discountBlock.innerText = saveString;
         }
       }
