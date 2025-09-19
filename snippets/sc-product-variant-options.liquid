@@ -489,8 +489,6 @@
 
 
     function labelsSetDefaultPrices(){
-      console.log(`%c function looAmountLabelsAndSetDefaultPrices() {`, `color: red; font-weight:bold; background-color: yellow;`);
-
       const amountLabels = document.querySelectorAll('.sc-amount-label');
       amountLabels.forEach(label => {
         const input = label.querySelector('input[name="Amount"]');
@@ -498,7 +496,6 @@
         const labelPriceBlock = label.querySelector('.sc-package__value-price');
         if(labelPriceBlock){
           labelPriceBlock.innerText = price;
-          console.log('label set default price:', price);
         }
       });
     }
@@ -574,6 +571,19 @@
         }
       }
 
+      function setLabelDiscount(label, priceString){
+        const discountBlock = label.querySelector('.sc-package__value-save');
+        const price = parseFloat(priceString.replace(/[^0-9.-]+/g,""));
+        const compare_at_price_string = label.querySelector('input[name="Amount"]').dataset.compare_at_price;
+        const compare_at_price = parseFloat(compare_at_price_string.replace(/[^0-9.-]+/g,""));
+
+        const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
+        const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
+        if(discountBlock){
+          discountBlock.innerText = saveString;
+        }
+      }
+
       function loopSellingPlansAndSetVariantPrice(variantId, variantTitle, sellingPlans){
         // Find radio by variantId
         // const radio = document.querySelector(`input[name="Amount"][data-variant_id="${variantId}"]`);
@@ -593,6 +603,9 @@
               priceBlock.innerText = sellingPlan.price;
               console.log('label set subscribe_price:', sellingPlan.price);
             }
+
+            
+            setLabelDiscount(label, sellingPlan.price);
             
           } else {
             console.log('sellingPlan not found for sellingPlaneName:', sellingPlaneName);
