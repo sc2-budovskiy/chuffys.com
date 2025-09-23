@@ -85,7 +85,7 @@
       -%}
         <div class="hidden product-form__variants" id="product-form-{{ section.id }}__variants" data-values=""></div>
         {% assign custom_selected_variant = product.selected_or_first_available_variant %}
-        {% if product.selected_variant %}
+        {% if product.selected_variant != nil %}
           {% assign custom_selected_variant = product.selected_variant %}
         {% else %}
           {% for variant in product.variants %}
