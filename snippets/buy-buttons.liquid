@@ -85,11 +85,16 @@
       -%}
         <div class="hidden product-form__variants" id="product-form-{{ section.id }}__variants" data-values=""></div>
         {% assign custom_selected_variant = product.selected_or_first_available_variant %}
-        {% for variant in product.variants %}
-          {% if variant.title contains '3 Month' %}
-            {% comment %} {% assign custom_selected_variant = variant %} {% endcomment %}
-          {% endif %}
-        {% endfor %}
+        {% if product.selected_variant %}
+          {% assign custom_selected_variant = product.selected_variant %}
+        {% else %}
+          {% for variant in product.variants %}
+            {% if variant.option1 contains 'Under 25 lbs' and variant.option2 contains '3 Month' %}
+              {% assign custom_selected_variant = variant %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
 
         <input
           type="hidden"
