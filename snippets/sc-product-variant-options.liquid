@@ -538,8 +538,10 @@
           pricePerItemBlock.innerText = price_per_item_string;
         }
 
+        const savedTemplate = discountBlock ? discountBlock.dataset.savedTemplate : '';
         const discountPrecent = Math.round(((compare_at_price - price) / compare_at_price) * 100);
-        const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
+        const saveString = discountPrecent > 0 ? savedTemplate.replace('(percent)', `${discountPrecent}%`) : '';
+        // const saveString = discountPrecent > 0 ? `Save ${discountPrecent}%` : '';
         if(discountBlock){
           discountBlock.innerText = saveString;
         }
