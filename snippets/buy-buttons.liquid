@@ -84,10 +84,17 @@
         data-type: 'add-to-cart-form'
       -%}
         <div class="hidden product-form__variants" id="product-form-{{ section.id }}__variants" data-values=""></div>
+        {% assign custom_selected_variant = product.selected_or_first_available_variant %}
+        {% for variant in product.variants %}
+          {% if variant.title contains '3 Month' %}
+            {% assign custom_selected_variant = variant %}
+          {% endif %}
+        {% endfor %}
+
         <input
           type="hidden"
           name="id"
-          value="{{ product.selected_or_first_available_variant.id }}"
+          value="{{ custom_selected_variant.id }}"
           class="product-variant-id"
           {% if block.settings.skip_cart %}
             data-skip-cart="true"
@@ -130,12 +137,6 @@
                 </span>
                 {% comment %} SC changes 17.09.2025 {% endcomment %}
                 {% if block.settings.display_price %}
-                  {% assign custom_selected_variant = product.selected_or_first_available_variant %}
-                  {% for variant in product.variants %}
-                    {% if variant.title contains '3 Month' %}
-                      {% assign custom_selected_variant = variant %}
-                    {% endif %}
-                  {% endfor %}
                   <span id="sc-button-text" class='{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
                     • {{ custom_selected_variant.price | money }}
                   </span>
