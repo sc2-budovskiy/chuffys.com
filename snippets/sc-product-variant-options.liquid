@@ -218,7 +218,6 @@
       {% assign popular = currentVariant.metafields.custom.popular.value %}
       {% assign recommended = currentVariant.metafields.custom.recommended.value %}
 
-
       <label id="sc-amount-label--{{ currentVariant.id }}" class="sc-amount-label accent-color-{{ settings.variant_pills_accent_color }}{% if settings.variant_pills_bold_text %} variant-pills--bold{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         {% if popular != blank %}
           <div class="sc-amount__popular">{{ popular }}</div>
@@ -262,8 +261,9 @@
             data-price="{{ currentVariant.price | money }}"
             data-compare_at_price="{{ currentVariant.compare_at_price | money }}"
             data-price_per_item="{{ price_per_item }}"
+            data-option_value="{{ value }}"
             form="{{ product_form_id }}"
-            {% if option.selected_value == value %}
+            {% if value contains '3 Month' %}
               checked
             {% endif %}
             class="{{ option_class }}{% if option_disabled %} disabled{% endif %}"
