@@ -95,7 +95,8 @@
           type="hidden"
           name="id"
           value="{{ custom_selected_variant.id }}"
-          class="product-variant-id"
+          data-variant-title="{{ custom_selected_variant.title }}"
+          class="product-variant-id sc-test-23092025"
           {% if block.settings.skip_cart %}
             data-skip-cart="true"
           {% endif %}
