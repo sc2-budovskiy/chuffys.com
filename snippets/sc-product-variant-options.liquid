@@ -263,7 +263,9 @@
             data-price_per_item="{{ price_per_item }}"
             data-option_value="{{ value }}"
             form="{{ product_form_id }}"
-            {% if value contains '3 Month' %}
+            {% if product.selected_variant.title contains value %}
+              checked
+            {% elsif value contains '3 Month' %}
               checked
             {% endif %}
             class="{{ option_class }}{% if option_disabled %} disabled{% endif %}"
