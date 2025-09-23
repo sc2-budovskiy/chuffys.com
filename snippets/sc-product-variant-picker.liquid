@@ -50,7 +50,7 @@
   >
   
   {% comment %} SC changes 17.09.2025 {% endcomment %}
-    <h3 class="sc-package__header">{{ block.settings.choose_text }}</h3>
+    <h3 class="sc-package__header">{{ product.metafields.custom.choose_text.value }}</h3>
     <div class="sc-package__wrapper">
       {%- for option in product.options_with_values -%}
         {% liquid

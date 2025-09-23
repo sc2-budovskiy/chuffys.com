@@ -281,8 +281,8 @@
               </div>
             </div>
             <div class="sc-package__value-col2">
-              {% assign percentage_saved_string = block.settings.ps_template | replace: "(percent)", percentage_saved %}
-              <div class="sc-package__value-save" data-saved-template="{{ block.settings.ps_template }}">{{ percentage_saved_string }}</div>
+              {% assign percentage_saved_string = product.metafields.custom.save_precent.value | replace: "(percent)", percentage_saved %}
+              <div class="sc-package__value-save" data-saved-template="{{ product.metafields.custom.save_precent.value }}">{{ percentage_saved_string }}</div>
             </div>
             <div class="sc-package__value-col3">
               <div class="sc-package__value-price">{{ currentVariant.price | money }}</div>
@@ -449,7 +449,7 @@
     <span class="sc-slider"></span>
   </label>
   <div class="sc-subscription-text">
-    <strong>{{ block.settings.save_text }}</strong>
+    <strong>{{ product.metafields.custom.save_text.value }}</strong>
   </div>
 </div>
 
