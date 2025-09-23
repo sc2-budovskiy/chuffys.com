@@ -130,8 +130,14 @@
                 </span>
                 {% comment %} SC changes 17.09.2025 {% endcomment %}
                 {% if block.settings.display_price %}
+                  {% assign custom_selected_variant = product.selected_or_first_available_variant %}
+                  {% for variant in product.variants %}
+                    {% if variant.title contains '3 Month' %}
+                      {% assign custom_selected_variant = variant %}
+                    {% endif %}
+                  {% endfor %}
                   <span id="sc-button-text" class='{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
-                    • {{ product.selected_or_first_available_variant.price | money }}
+                    • {{ custom_selected_variant.price | money }}
                   </span>
                 {% endif %}
               </span>
