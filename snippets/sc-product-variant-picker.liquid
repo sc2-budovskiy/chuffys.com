@@ -127,6 +127,7 @@
                   </div>
                 </div>
               {% when 'amount' %}
+                {% comment %} SC changes 17.09.2025 {% endcomment %}
                 <div class="sc-package__amount">
                   {% render 'sc-product-variant-options', product: product, option: option, block: block, type: 'amount', loop_subscriptions_block:loop_subscriptions_block %}
                 </div>
