@@ -19,10 +19,7 @@
 }
 
 .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
-    padding-bottom:15px;
-    padding-left:22px;
-    padding-right:22px;
-    padding-top:15px;
+    padding:15px 22px;
     font-weight: bold;
     border:1px solid #cccccd;
 }
@@ -320,6 +317,13 @@
     }
 }
 
+@media screen and (min-width: 501px) and (max-width: 749.99px) {
+    .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
 @media screen and (min-width: 451px) and (max-width: 500px) {
     .sc-package__wrapper {
         padding: 20px;
@@ -350,7 +354,7 @@
         width: 18px;
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
-        padding: 12px 18px;
+        padding: 8px 14px;
         font-size: 13px;
     }
 }
@@ -399,7 +403,7 @@
         width: 18px;
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
-        padding: 12px 18px;
+        padding: 8px 14px;
         font-size: 13px;
     }
 }
@@ -448,7 +452,7 @@
         width: 18px;
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
-        padding: 12px 18px;
+        padding: 8px 14px;
         font-size: 13px;
     }
 }
@@ -472,6 +476,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+    }
+    .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
+        padding: 8px 14px;
+        font-size: 13px;
     }
 }
 
@@ -498,6 +506,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+    }
+    .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
+        padding: 8px 14px;
+        font-size: 13px;
     }
 }
 

@@ -141,6 +141,7 @@
                     {{ 'products.product.add_to_cart' | t }}
                   {%- endif -%}
                 </span>
+                
                 {% comment %} SC changes 17.09.2025 {% endcomment %}
                 {% if block.settings.display_price %}
                   <span id="sc-button-text" class='{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
