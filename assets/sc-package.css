@@ -424,7 +424,7 @@
     }
 
     .sc-package__wrapper {
-        padding: 20px;
+        padding: 12px;
     }
     .sc-package .product-form__input {
         margin: 0 0 1.5rem;
@@ -458,6 +458,10 @@
 }
 
 @media screen and (min-width: 376px) and (max-width: 389.99px) {
+    .sc-package__wrapper {
+        padding: 12px;
+    }
+
     .sc-package .product-form__input {
         margin: 0 0 1.5rem;
     }
@@ -484,6 +488,10 @@
 }
 
 @media screen and (min-width: 100px) and (max-width: 375.99px) {
+    .sc-package__wrapper {
+        padding: 12px;
+    }
+    
     .sc-package .product-form__input {
         margin: 0 0 1.5rem;
     }
