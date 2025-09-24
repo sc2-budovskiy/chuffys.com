@@ -453,7 +453,7 @@
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
         padding: 8px 10px;
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
@@ -483,7 +483,7 @@
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
         padding: 8px 10px;
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
@@ -517,7 +517,7 @@
     }
     .sc-package .sc-package__wrapper .product-form__input:not(.product-form__input--quantity-breaks) input[type=radio]+label {
         padding: 8px 10px;
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
