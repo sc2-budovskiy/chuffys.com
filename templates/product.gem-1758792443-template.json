@@ -181,7 +181,7 @@
           }
         },
         "loop_subscriptions_loop_widget_4RT66X": {
-          "type": "shopify://apps/loop-subscriptions/blocks/loop_widget/267a7c64-5cb3-4552-b817-5485165f0a0b",
+          "type": "shopify:\/\/apps\/loop-subscriptions\/blocks\/loop_widget\/267a7c64-5cb3-4552-b817-5485165f0a0b",
           "settings": {}
         },
         "buy_buttons": {
@@ -208,19 +208,19 @@
           "settings": {
             "icon_1": "add_shopping_cart",
             "filled_icon_1": false,
-            "top_text_1": "<strong>[start_date]</strong>",
+            "top_text_1": "<strong>[start_date]<\/strong>",
             "bottom_text_1": "Ordered",
             "min_days_1": 0,
             "max_days_1": 0,
             "icon_2": "local_shipping",
             "filled_icon_2": false,
-            "top_text_2": "<strong>[start_date] - [end_date]</strong>",
+            "top_text_2": "<strong>[start_date] - [end_date]<\/strong>",
             "bottom_text_2": "Order Ready",
             "min_days_2": 1,
             "max_days_2": 2,
             "icon_3": "redeem",
             "filled_icon_3": false,
-            "top_text_3": "<strong>[start_date] - [end_date]</strong>",
+            "top_text_3": "<strong>[start_date] - [end_date]<\/strong>",
             "bottom_text_3": "Delivered",
             "min_days_3": 10,
             "max_days_3": 12,
@@ -295,12 +295,12 @@
             "autoplay_speed": 5,
             "display_arrows": false,
             "display_dots": true,
-            "author_1": "<em>Author</em> [stars]",
-            "text_1": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "author_2": "<em>Author</em> [stars]",
-            "text_2": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "author_3": "<em>Author</em> [stars]",
-            "text_3": "<p>Share positive thoughts and feedback from your customer.</p>",
+            "author_1": "<em>Author<\/em> [stars]",
+            "text_1": "<p>Share positive thoughts and feedback from your customer.<\/p>",
+            "author_2": "<em>Author<\/em> [stars]",
+            "text_2": "<p>Share positive thoughts and feedback from your customer.<\/p>",
+            "author_3": "<em>Author<\/em> [stars]",
+            "text_3": "<p>Share positive thoughts and feedback from your customer.<\/p>",
             "margin_top": 24,
             "margin_bottom": 24
           }
@@ -425,7 +425,7 @@
           "settings": {
             "column": "col_1",
             "visibility": "always-display",
-            "text": "<p>Use the flexible grid system to create any layout. Each block can be placed in any of the columns.</p>",
+            "text": "<p>Use the flexible grid system to create any layout. Each block can be placed in any of the columns.<\/p>",
             "text_style": "body",
             "alignment": "center",
             "mobile_alignment": "mobile-center",
@@ -446,7 +446,7 @@
             "icon_heading_size": "h3",
             "icon_text_alignment": "left",
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>",
             "margin_top": 20,
             "margin_bottom": 30
           }
@@ -464,7 +464,7 @@
             "icon_heading_size": "h3",
             "icon_text_alignment": "left",
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>",
             "margin_top": 20,
             "margin_bottom": 20
           }
@@ -495,7 +495,7 @@
             "icon_heading_size": "h3",
             "icon_text_alignment": "left",
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>",
             "margin_top": 20,
             "margin_bottom": 30
           }
@@ -513,7 +513,7 @@
             "icon_heading_size": "h3",
             "icon_text_alignment": "left",
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>",
             "margin_top": 20,
             "margin_bottom": 20
           }
@@ -616,7 +616,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Image/Video Slider",
+        "title": "Image\/Video Slider",
         "title_highlight_color": "#6d388b",
         "heading_size": "h1",
         "color_scheme": "background-1",
@@ -664,7 +664,7 @@
             "icon": "check_circle",
             "filled_icon": false,
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>"
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>"
           }
         },
         "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-2": {
@@ -673,7 +673,7 @@
             "icon": "check_circle",
             "filled_icon": false,
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>"
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>"
           }
         },
         "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-3": {
@@ -682,7 +682,7 @@
             "icon": "check_circle",
             "filled_icon": false,
             "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>"
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post<\/p>"
           }
         },
         "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1": {
@@ -696,7 +696,7 @@
         "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair icons with content to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair icons with content to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         },
@@ -749,24 +749,24 @@
           "type": "column",
           "settings": {
             "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "text": "<p>Share positive thoughts and feedback from your customer..<\/p>",
+            "author": "<em><strong>Author<\/strong><\/em>"
           }
         },
         "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-2": {
           "type": "column",
           "settings": {
             "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "text": "<p>Share positive thoughts and feedback from your customer..<\/p>",
+            "author": "<em><strong>Author<\/strong><\/em>"
           }
         },
         "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-3": {
           "type": "column",
           "settings": {
             "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "text": "<p>Share positive thoughts and feedback from your customer..<\/p>",
+            "author": "<em><strong>Author<\/strong><\/em>"
           }
         }
       },
