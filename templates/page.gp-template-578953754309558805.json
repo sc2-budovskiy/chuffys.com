@@ -1,1 +1,68 @@
-{"sections":{"gp_section_578953772294734641":{"settings":{"checksum":"bbac23ce114430e91b188b00f2c6a64d763a976f2a2c928397e2ac016576e35d_1_1_1_0_"},"type":"gp-section-578953772294734641"},"gp_section_578953773016154721":{"settings":{"checksum":"d4eaa0ad61818a0e18e98443bc8706559bfb33e2c8237a6181668d09584e0c0f_1_1_1_0_","section_preload":"true"},"type":"gp-section-578953773016154721"},"gp_section_578953773032932121":{"settings":{"checksum":"23a622d46a4f46fdf83d5154982276dd0d8511742a48a081924ab958712c9b10_1_1_1_0_"},"type":"gp-section-578953773032932121"}},"order":["gp_section_578953773016154721","gp_section_578953773032932121","gp_section_578953772294734641"],"layout":"theme.gempages.blank"}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_578953772294734641": {
+      "settings": {
+        "checksum": "bbac23ce114430e91b188b00f2c6a64d763a976f2a2c928397e2ac016576e35d_1_1_1_0__1"
+      },
+      "type": "gp-section-578953772294734641"
+    },
+    "gp_section_578953773016154721": {
+      "settings": {
+        "checksum": "d4eaa0ad61818a0e18e98443bc8706559bfb33e2c8237a6181668d09584e0c0f_1_1_1_0__1",
+        "gg3mWByI8_j_text": "<p>Last Updated 1 Aug 2025</p>",
+        "gg8OVYMi06f_text": "<p>Bladder-supporting formula helps your dog sleep in naturally—so you don’t get jolted awake with the sunrise.</p>",
+        "ggH5rOdX-Up_text": "<p>No more hours of pacing or whining. Most dogs are curled up and calm in under 45 minutes—verified by 1,200+ owners.</p>",
+        "ggQnnn9baKL_text": "2. Keeps Them Calm &amp; Asleep All Night Long",
+        "ggTBWgUrInm_text": "<p>8 out of 10 owners report significantly less disruptive behavior by night two—guaranteed tranquility.</p>",
+        "ggTZ4sXGTX0_text": "<p>Crafted with gentle, vet-approved botanicals that help sustain deep sleep—no midnight wake-ups, ever.</p>",
+        "ggWM9D-C7Fz_text": "3. Stops Late Night Barking, Scratching &amp; Pacing",
+        "ggXcP1jdD1h_text": "Journal of American Veterinary Association",
+        "ggZYywsGUbe_text": "<p>Limited time: 50% OFF + FREE SHIPPING</p>",
+        "ggllZN-LmDA_text": "1. Falls Asleep Fast - In as Little as 45 Min",
+        "ggnHnxEsPWS_text": "Why Vets Are Telling Dog Owners to Try This Chew for Guaranteed, All-Night Sleep",
+        "ggo_F8cdtKd_text": "<p><i><strong>Feeling desperate after another sleepless night of barking, pacing, or pawing at the door?</strong></i></p><p>&nbsp;</p><p><i>Now, vets and pet parents are raving about a <strong>simple, all-natural bedtime chew</strong> that helps restless dogs relax, drift off in under an hour, and stay peacefully asleep all night — without drugs or weeks of training.</i></p>",
+        "ggvrWe957Xm_text": "By <strong>Dr Amanda Rutter</strong>",
+        "ggwGfB3S0dO_text": "4. No More 5AM Wake-Up Calls for the Bathroom",
+        "section_preload": "true"
+      },
+      "type": "gp-section-578953773016154721"
+    },
+    "gp_section_578953773032932121": {
+      "settings": {
+        "checksum": "23a622d46a4f46fdf83d5154982276dd0d8511742a48a081924ab958712c9b10_1_1_1_0__1",
+        "gg0vv8CN9uH_text": "<p>|</p>",
+        "ggCnxfxPyFz_text": "<p>Sell-out Risk: <span style=\"color:#E30D0D;\"><strong>High</strong></span></p>",
+        "ggFDO4-0sU3_dayLabel": "Days",
+        "ggFDO4-0sU3_hourLabel": "hrs",
+        "ggFDO4-0sU3_minuteLabel": "min",
+        "ggFDO4-0sU3_secondLabel": "sec",
+        "ggFDO4-0sU3_weekLabel": "Weeks",
+        "ggGEkuXfr4K_text": "<p><strong>FREE </strong>Shipping</p>",
+        "ggJmLRwpaKL_text": "<p>Try it today with a 90-Day Money Back Guarantee!</p>",
+        "ggNaDRcH4Qq_text": "6. Loved by Even the Pickiest Eaters",
+        "ggbRBoPVneC_text": "Try Dreamy Pup Chews Today to Help Your Dog Sleep All Night!",
+        "ggccP1xQE7g_text": "5. 100% Safe, Vet Approved &amp; All-Natural",
+        "ggehIj0FtFM_label": "<p>GET 50% OFF</p>",
+        "ggmRYAAPMCY_text": "<p>Made with all-natural, non-habit-forming ingredients trusted by veterinarians. Gentle enough for weekly use.</p>",
+        "ggpMCCwsrJ6_text": "<p>Soft chewable and savory chicken flavor means even fussy dogs scarf it down—making nightly dosing effortless.</p>",
+        "ggpkU8wTt7k_text": "<p>SALE ENDS SOON</p>"
+      },
+      "type": "gp-section-578953773032932121"
+    }
+  },
+  "order": [
+    "gp_section_578953773016154721",
+    "gp_section_578953773032932121",
+    "gp_section_578953772294734641"
+  ],
+  "layout": "theme.gempages.blank"
+}
