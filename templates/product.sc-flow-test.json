@@ -1856,46 +1856,6 @@
         "custom_contaner_colors_text": "#2e2a39"
       }
     },
-    "rich_text_XPYFAq": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_DDc7RA": {
-          "type": "heading",
-          "settings": {
-            "title": "References (Science behind it)",
-            "title_highlight_color": "#6d388b",
-            "heading_size": "h2"
-          }
-        },
-        "text_PTDyY6": {
-          "type": "text",
-          "settings": {
-            "text": "<h6><em>American Kennel Club (AKC) discusses the safe use of melatonin in dogs, explaining how it can help with sleep and anxiety <br/></em><a href=\"https://www.akc.org/expert-advice/health/melatonin-for-dogs/\"><em>Melatonin for Dogs: Benefits, Dosage, and When to Use</em></a></h6><h6><em>Song, Y., et al. (2025). \"Melatonin and Its Applications in Veterinary Medicine.\" National Library of Medicine</em></h6><h6><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11833209/\"><em>Melatonin effects on animal behavior: circadian rhythm, stress response, and modulation of behavioral patterns - PMC</em></a></h6><h6><em>Author Gollakner, Rania BS, DVM, MPH “Chamomile”VCA Animal Hospitals</em><a href=\"https://vcahospitals.com/know-your-pet/chamomile\" target=\"_blank\"><span style=\"text-decoration:underline\"><em>https://vcahospitals.com/know-your-pet/chamomile</em></span></a></h6><h6><em>Author Krouse, Lauren “Chamomile For Dogs: Benefits & Uses”Great Pet Care, Oct 21. 2020</em><a href=\"https://www.greatpetcare.com/wellness/chamomile-for-dogs/\" target=\"_blank\"><span style=\"text-decoration:underline\"><em>https://www.greatpetcare.com/wellness/chamomile-for-dogs/</em></span></a></h6>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DDc7RA",
-        "text_PTDyY6"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
     "175489386195d40c85": {
       "type": "apps",
       "blocks": {
@@ -1942,7 +1902,6 @@
     "ss_featured_review_slider_mrDATw",
     "image_with_text_zfWni4",
     "collapsible_content_EUARtg",
-    "rich_text_XPYFAq",
     "175489386195d40c85"
   ]
 }
