@@ -329,6 +329,11 @@
       "name": "Replo Ticker 1",
       "settings": {}
     },
+    "replo_replo_container_11_Wmm9fn": {
+      "type": "replo-replo-container-11",
+      "name": "Replo Container 11",
+      "settings": {}
+    },
     "custom_columns_fnzYBm": {
       "type": "custom-columns",
       "blocks": {
@@ -771,21 +776,6 @@
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "section_divider_zppkEY": {
-      "type": "section-divider",
-      "settings": {
-        "visibility": "always-display",
-        "shape": "waves_3",
-        "flip_horizontal": false,
-        "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#dd1d1d",
-        "background_color": "background-1",
-        "custom_background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "results_XWWJ8a": {
@@ -1848,11 +1838,6 @@
         "display_id": false,
         "include_margins": true
       }
-    },
-    "replo_replo_container_11_Wmm9fn": {
-      "type": "replo-replo-container-11",
-      "name": "Replo Container 11",
-      "settings": {}
     }
   },
   "order": [
@@ -1864,7 +1849,6 @@
     "section_divider_JTc8QK",
     "ss_glow_testimonial_UJxNMB",
     "custom_columns_fEwY39",
-    "section_divider_zppkEY",
     "results_XWWJ8a",
     "image_with_text_XeUaib",
     "comparison_table_4iqNQE",
