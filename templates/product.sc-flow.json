@@ -533,6 +533,7 @@
         "row_84PrdH",
         "row_3zCj8d"
       ],
+      "disabled": true,
       "name": "Results",
       "settings": {
         "display_id": false,
@@ -650,6 +651,7 @@
         "row_fY8ENK",
         "row_XEzMjP"
       ],
+      "disabled": true,
       "name": "Comparison table",
       "settings": {
         "display_id": false,
@@ -852,6 +854,7 @@
         "icon_with_text_766NLp",
         "icon_with_text_tMRPFQ"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -893,6 +896,7 @@
     },
     "image_with_text_pVjBDE": {
       "type": "image-with-text",
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "display_id": false,
@@ -1017,6 +1021,7 @@
         "tab_A4BHWN",
         "tab_WD6dDb"
       ],
+      "disabled": true,
       "name": "Content tabs",
       "settings": {
         "display_id": false,
@@ -1050,6 +1055,7 @@
     },
     "image_with_text_QtrKKH": {
       "type": "image-with-text",
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "display_id": false,
@@ -1119,6 +1125,7 @@
         "quote_wbfkCH",
         "quote_yd4G8A"
       ],
+      "disabled": true,
       "name": "SS - Review slider",
       "settings": {
         "example": "<div data-review-quote-slider-target></div>",
@@ -1161,6 +1168,7 @@
         "text_zyA79e",
         "button_Bz8dqW"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "display_id": false,
@@ -1290,6 +1298,7 @@
         "collapsible_row_UrkwJV",
         "collapsible_row_AXgzKy"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "display_id": false,
@@ -1341,6 +1350,7 @@
         "heading_DDc7RA",
         "text_PTDyY6"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "display_id": false,
