@@ -364,6 +364,11 @@
       "name": "Replo Container 7749",
       "settings": {}
     },
+    "replo_replo_container_7814_ctbfYt": {
+      "type": "replo-replo-container-7814",
+      "name": "Replo Container 7814",
+      "settings": {}
+    },
     "ss_glow_testimonial_UJxNMB": {
       "type": "ss-glow-testimonial",
       "blocks": {
@@ -466,6 +471,7 @@
         "image_9iHKRU",
         "image_zrfhXc"
       ],
+      "disabled": true,
       "name": "SS - Glow Testimonial",
       "settings": {
         "animation_time": 30,
@@ -485,158 +491,6 @@
         "background-color": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_columns_fEwY39": {
-      "type": "custom-columns",
-      "blocks": {
-        "heading_aDQpeX": {
-          "type": "heading",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "heading": "Specifically Designed For Dogs",
-            "title_highlight_color": "#6d388b",
-            "heading_size": "h1",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_GpPeHA": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Vet Formulated",
-            "text": "<p><em>Developed by Dr. S. Harris, DVM (35 years)</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "icon_with_text_w3xM3n": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Clinically Inspired Blend",
-            "text": "<p><em>Safe proprietary blend for Dogs</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_ctQ3BY": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Made in USA",
-            "text": "<p><em>FDA-registered facility, GMP certified</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_hByNTP": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "NASC Quality Seal",
-            "text": "<p><em>Meets strict supplement standards</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "image_6xnXCq": {
-          "type": "image",
-          "settings": {
-            "column": "col_3",
-            "visibility": "always-display",
-            "image": "shopify://shop_images/4097cfd7-c447-44aa-968f-1de350036b08.png",
-            "width": 100,
-            "alignment": "center",
-            "mobile_alignment": "center",
-            "border_radius": 0,
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "heading_aDQpeX",
-        "icon_with_text_GpPeHA",
-        "icon_with_text_w3xM3n",
-        "icon_with_text_ctQ3BY",
-        "icon_with_text_hByNTP",
-        "image_6xnXCq"
-      ],
-      "name": "Custom columns",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "background-1",
-        "columns_count": 4,
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "desktop_vertical_alignment": "center",
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "flex-start",
-        "col_1_desktop_width": 12,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 4,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
       }
     },
     "results_XWWJ8a": {
@@ -1681,8 +1535,8 @@
     "replo_replo_container_1_DpEF9M",
     "replo_replo_container_7795_U4Fzh8",
     "replo_replo_container_7749_QpbA4Y",
+    "replo_replo_container_7814_ctbfYt",
     "ss_glow_testimonial_UJxNMB",
-    "custom_columns_fEwY39",
     "results_XWWJ8a",
     "image_with_text_XeUaib",
     "comparison_table_4iqNQE",
