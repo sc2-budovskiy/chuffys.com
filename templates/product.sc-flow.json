@@ -1848,11 +1848,17 @@
         "display_id": false,
         "include_margins": true
       }
+    },
+    "replo_replo_container_11_Wmm9fn": {
+      "type": "replo-replo-container-11",
+      "name": "Replo Container 11",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "replo_replo_ticker_1_DDf9mm",
+    "replo_replo_container_11_Wmm9fn",
     "custom_columns_fnzYBm",
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
