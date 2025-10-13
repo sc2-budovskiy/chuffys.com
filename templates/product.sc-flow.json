@@ -334,123 +334,10 @@
       "name": "Replo Container 11",
       "settings": {}
     },
-    "custom_columns_fnzYBm": {
-      "type": "custom-columns",
-      "blocks": {
-        "heading_KP7EH9": {
-          "type": "heading",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "heading": "How It Works",
-            "title_highlight_color": "#6d388b",
-            "heading_size": "h1",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_m6LGhJ": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Step 1: One Chew at Bedtime",
-            "text": "<p><em>Simple chew with a great taste they think is a treat - no pills, no liquids</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "icon_with_text_KWmxmT": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Step 2: Dog Drifts Off in 45 Min",
-            "text": "<p><em>All natural ingredients specially formulated by vets to be safe for dogs</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_rkhaan": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Step 3: Stays Asleep All Night",
-            "text": "<p><em>No barking, no scratching, no 3 AM bathroom wake ups</em></p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "heading_KP7EH9",
-        "icon_with_text_m6LGhJ",
-        "icon_with_text_KWmxmT",
-        "icon_with_text_rkhaan"
-      ],
-      "name": "Custom columns",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "background-1",
-        "columns_count": 4,
-        "column_gap_desktop": 48,
-        "row_gap_desktop": 20,
-        "desktop_vertical_alignment": "center",
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "flex-start",
-        "col_1_desktop_width": 12,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 4,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 36,
-        "padding_bottom": 0,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
+    "replo_replo_container_7781_7TLDNn": {
+      "type": "replo-replo-container-7781",
+      "name": "Replo Container 7781",
+      "settings": {}
     },
     "image_with_text_3GfmUK": {
       "type": "image-with-text",
@@ -1839,9 +1726,9 @@
         "include_margins": true
       }
     },
-    "replo_replo_container_7781_7TLDNn": {
-      "type": "replo-replo-container-7781",
-      "name": "Replo Container 7781",
+    "replo_replo_container_7787_8YH4MT": {
+      "type": "replo-replo-container-7787",
+      "name": "Replo Container 7787",
       "settings": {}
     }
   },
@@ -1850,7 +1737,7 @@
     "replo_replo_ticker_1_DDf9mm",
     "replo_replo_container_11_Wmm9fn",
     "replo_replo_container_7781_7TLDNn",
-    "custom_columns_fnzYBm",
+    "replo_replo_container_7787_8YH4MT",
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
     "ss_glow_testimonial_UJxNMB",
