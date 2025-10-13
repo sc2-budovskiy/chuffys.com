@@ -349,6 +349,11 @@
       "name": "Replo Container 16",
       "settings": {}
     },
+    "replo_replo_container_1_DpEF9M": {
+      "type": "replo-replo-container-1",
+      "name": "Replo Container 1",
+      "settings": {}
+    },
     "image_with_text_3GfmUK": {
       "type": "image-with-text",
       "name": "t:sections.image-with-text.presets.name",
@@ -928,21 +933,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 24
-      }
-    },
-    "b321ab88-2b59-4dba-bade-54885c874ca5": {
-      "type": "section-divider",
-      "settings": {
-        "visibility": "always-display",
-        "shape": "waves_3",
-        "flip_horizontal": false,
-        "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#dd1d1d",
-        "background_color": "background-1",
-        "custom_background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "8beb6911-28c6-482c-976a-e5421ad3e8df": {
@@ -1729,6 +1719,7 @@
     "replo_replo_container_7781_7TLDNn",
     "replo_replo_container_7787_8YH4MT",
     "replo_replo_container_16_69cQnX",
+    "replo_replo_container_1_DpEF9M",
     "image_with_text_3GfmUK",
     "ss_glow_testimonial_UJxNMB",
     "custom_columns_fEwY39",
@@ -1736,7 +1727,6 @@
     "image_with_text_XeUaib",
     "comparison_table_4iqNQE",
     "related-products",
-    "b321ab88-2b59-4dba-bade-54885c874ca5",
     "8beb6911-28c6-482c-976a-e5421ad3e8df",
     "image_with_text_pVjBDE",
     "section_divider_zzYXyB",
