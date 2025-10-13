@@ -1080,123 +1080,6 @@
         "custom_section_gradient_background": ""
       }
     },
-    "icon_bar_PMHrPJ": {
-      "type": "icon-bar",
-      "blocks": {
-        "column_PCEDxX": {
-          "type": "column",
-          "settings": {
-            "icon": "language_us",
-            "filled_icon": false,
-            "image": "shopify://shop_images/usa.png",
-            "title": "",
-            "text": "<h5>With Locally Sourced Ingredients</h5>"
-          }
-        },
-        "column_J3DxGD": {
-          "type": "column",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "image": "shopify://shop_images/dye-free.png",
-            "title": "",
-            "text": "<h5><strong>No Artificial Colors or Flavors</strong><br/><br/></h5>"
-          }
-        },
-        "column_J3wwP3": {
-          "type": "column",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "image": "shopify://shop_images/gmo.png",
-            "title": "",
-            "text": "<h5>GMO, Hormone & Antibiotic Free</h5>"
-          }
-        },
-        "column_mRG6rK": {
-          "type": "column",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "image": "shopify://shop_images/tag.png",
-            "title": "",
-            "text": "<h5>GMP/SQF Certified</h5>"
-          }
-        },
-        "column_MjPmVf": {
-          "type": "column",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "image": "shopify://shop_images/fda.png",
-            "title": "",
-            "text": "<h5>In line with FDA CVM Guidelines</h5>"
-          }
-        },
-        "column_cDa6JM": {
-          "type": "column",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "image": "shopify://shop_images/blood-test.png",
-            "title": "",
-            "text": "<h5>Third Party Batch Tested</h5>"
-          }
-        }
-      },
-      "block_order": [
-        "column_PCEDxX",
-        "column_J3DxGD",
-        "column_J3wwP3",
-        "column_mRG6rK",
-        "column_MjPmVf",
-        "column_cDa6JM"
-      ],
-      "name": "Icon Bar",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "100% Certified & Safe",
-        "title_highlight_color": "#6d388b",
-        "heading_size": "h1",
-        "text": "",
-        "color_scheme": "background-1",
-        "icon_layout": "vertical",
-        "icon_size": "large",
-        "icon_color": "accent-1",
-        "cards_color_scheme": "background-1",
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 6,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": true,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "columns_mobile": "2",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": true,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_cards_colors_background": "#f3f3f3",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#2e2a39"
-      }
-    },
     "ss_featured_review_slider_mrDATw": {
       "type": "ss-featured-review-slider",
       "blocks": {
@@ -1513,7 +1396,6 @@
     "image_with_text_pVjBDE",
     "content_tabs_R7QPXC",
     "image_with_text_QtrKKH",
-    "icon_bar_PMHrPJ",
     "ss_featured_review_slider_mrDATw",
     "image_with_text_zfWni4",
     "collapsible_content_EUARtg",
