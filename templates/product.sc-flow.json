@@ -374,6 +374,11 @@
       "name": "Replo Container 7818",
       "settings": {}
     },
+    "replo_replo_container_7751_RKNTyx": {
+      "type": "replo-replo-container-7751",
+      "name": "Replo Container 7751",
+      "settings": {}
+    },
     "ss_glow_testimonial_UJxNMB": {
       "type": "ss-glow-testimonial",
       "blocks": {
@@ -1388,6 +1393,7 @@
     "replo_replo_container_7749_QpbA4Y",
     "replo_replo_container_7814_ctbfYt",
     "replo_replo_container_7818_erawDU",
+    "replo_replo_container_7751_RKNTyx",
     "ss_glow_testimonial_UJxNMB",
     "results_XWWJ8a",
     "comparison_table_4iqNQE",
