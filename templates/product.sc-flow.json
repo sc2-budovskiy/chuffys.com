@@ -339,6 +339,16 @@
       "name": "Replo Container 7781",
       "settings": {}
     },
+    "replo_replo_container_7787_8YH4MT": {
+      "type": "replo-replo-container-7787",
+      "name": "Replo Container 7787",
+      "settings": {}
+    },
+    "replo_replo_container_16_69cQnX": {
+      "type": "replo-replo-container-16",
+      "name": "Replo Container 16",
+      "settings": {}
+    },
     "image_with_text_3GfmUK": {
       "type": "image-with-text",
       "name": "t:sections.image-with-text.presets.name",
@@ -373,21 +383,6 @@
         "custom_colors_outline_button": "#dd1d1d",
         "custom_section_colors_background": "#ffffff",
         "custom_section_gradient_background": ""
-      }
-    },
-    "section_divider_JTc8QK": {
-      "type": "section-divider",
-      "settings": {
-        "visibility": "always-display",
-        "shape": "waves_3",
-        "flip_horizontal": false,
-        "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#dd1d1d",
-        "background_color": "background-1",
-        "custom_background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "ss_glow_testimonial_UJxNMB": {
@@ -1725,11 +1720,6 @@
         "display_id": false,
         "include_margins": true
       }
-    },
-    "replo_replo_container_7787_8YH4MT": {
-      "type": "replo-replo-container-7787",
-      "name": "Replo Container 7787",
-      "settings": {}
     }
   },
   "order": [
@@ -1738,8 +1728,8 @@
     "replo_replo_container_11_Wmm9fn",
     "replo_replo_container_7781_7TLDNn",
     "replo_replo_container_7787_8YH4MT",
+    "replo_replo_container_16_69cQnX",
     "image_with_text_3GfmUK",
-    "section_divider_JTc8QK",
     "ss_glow_testimonial_UJxNMB",
     "custom_columns_fEwY39",
     "results_XWWJ8a",
