@@ -1876,11 +1876,17 @@
         "display_id": false,
         "include_margins": true
       }
+    },
+    "replo_replo_ticker_1_Kfycdx": {
+      "type": "replo-replo-ticker-1",
+      "name": "Replo Ticker 1",
+      "settings": {}
     }
   },
   "order": [
     "horizontal_ticker_EdKAEt",
     "main",
+    "replo_replo_ticker_1_Kfycdx",
     "custom_columns_fnzYBm",
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
