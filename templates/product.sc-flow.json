@@ -9,64 +9,6 @@
  */
 {
   "sections": {
-    "horizontal_ticker_EdKAEt": {
-      "type": "horizontal-ticker",
-      "blocks": {
-        "text_cDnWtV": {
-          "type": "text",
-          "settings": {
-            "title": "🚚 Free Shipping USA-wide"
-          }
-        },
-        "text_X7mwci": {
-          "type": "text",
-          "settings": {
-            "title": "Trusted by 32,456+ Happy Dog Owners 🐾"
-          }
-        },
-        "text_fLVHUW": {
-          "type": "text",
-          "settings": {
-            "title": "🔬 Backed by Science , FDA Compliant"
-          }
-        }
-      },
-      "block_order": [
-        "text_cDnWtV",
-        "text_X7mwci",
-        "text_fLVHUW"
-      ],
-      "disabled": true,
-      "name": "Horizontal Ticker",
-      "settings": {
-        "visibility": "always-display",
-        "speed": 3,
-        "direction": "normal",
-        "stop_on_hover": false,
-        "mobile_spacing": 60,
-        "desktop_spacing": 100,
-        "color_scheme": "accent-1",
-        "mobile_text_size": 16,
-        "desktop_text_size": 18,
-        "italic_text": false,
-        "uppercase_text": false,
-        "bold_text": false,
-        "mobile_image_height": 26,
-        "desktop_image_height": 40,
-        "mobile_reviews_width": 300,
-        "desktop_reviews_width": 400,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
-        "mobile_padding_top": 12,
-        "mobile_padding_bottom": 12,
-        "desktop_padding_top": 16,
-        "desktop_padding_bottom": 16,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39"
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -162,9 +104,6 @@
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1": {
           "type": "variant_picker",
           "settings": {
-            "choose_text": "Choose Package:",
-            "save_text": "Autoship & save",
-            "ps_template": "Save custom (percent)",
             "picker_types": "pills, amount, dropdown",
             "custom_labels": "[name]:",
             "skip_unavailable": false,
@@ -1919,11 +1858,16 @@
         "display_id": false,
         "include_margins": true
       }
+    },
+    "replo_replo_ticker_1_DDf9mm": {
+      "type": "replo-replo-ticker-1",
+      "name": "Replo Ticker 1",
+      "settings": {}
     }
   },
   "order": [
-    "horizontal_ticker_EdKAEt",
     "main",
+    "replo_replo_ticker_1_DDf9mm",
     "custom_columns_fnzYBm",
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
