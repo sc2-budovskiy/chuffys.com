@@ -1823,11 +1823,17 @@
         "display_id": false,
         "include_margins": true
       }
+    },
+    "replo_replo_container_11_egn7Xy": {
+      "type": "replo-replo-container-11",
+      "name": "Replo Container 11",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "replo_replo_ticker_1_Kfycdx",
+    "replo_replo_container_11_egn7Xy",
     "custom_columns_fnzYBm",
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
