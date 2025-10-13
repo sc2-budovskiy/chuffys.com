@@ -324,6 +324,11 @@
         "desktop_padding_bottom": 36
       }
     },
+    "replo_replo_ticker_1_DDf9mm": {
+      "type": "replo-replo-ticker-1",
+      "name": "Replo Ticker 1",
+      "settings": {}
+    },
     "custom_columns_fnzYBm": {
       "type": "custom-columns",
       "blocks": {
@@ -614,21 +619,6 @@
         "background-color": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "section_divider_xb7e8y": {
-      "type": "section-divider",
-      "settings": {
-        "visibility": "always-display",
-        "shape": "waves_3",
-        "flip_horizontal": false,
-        "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#dd1d1d",
-        "background_color": "background-1",
-        "custom_background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "custom_columns_fEwY39": {
@@ -1858,11 +1848,6 @@
         "display_id": false,
         "include_margins": true
       }
-    },
-    "replo_replo_ticker_1_DDf9mm": {
-      "type": "replo-replo-ticker-1",
-      "name": "Replo Ticker 1",
-      "settings": {}
     }
   },
   "order": [
@@ -1872,7 +1857,6 @@
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
     "ss_glow_testimonial_UJxNMB",
-    "section_divider_xb7e8y",
     "custom_columns_fEwY39",
     "section_divider_zppkEY",
     "results_XWWJ8a",
