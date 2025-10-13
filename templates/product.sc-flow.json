@@ -1838,12 +1838,18 @@
         "display_id": false,
         "include_margins": true
       }
+    },
+    "replo_replo_container_7781_7TLDNn": {
+      "type": "replo-replo-container-7781",
+      "name": "Replo Container 7781",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "replo_replo_ticker_1_DDf9mm",
     "replo_replo_container_11_Wmm9fn",
+    "replo_replo_container_7781_7TLDNn",
     "custom_columns_fnzYBm",
     "image_with_text_3GfmUK",
     "section_divider_JTc8QK",
