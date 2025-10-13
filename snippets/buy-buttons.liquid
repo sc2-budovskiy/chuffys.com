@@ -84,6 +84,7 @@
         data-type: 'add-to-cart-form'
       -%}
         <div class="hidden product-form__variants" id="product-form-{{ section.id }}__variants" data-values=""></div>
+        {% comment %} SC changes 17.09.2025 {% endcomment %}
         {% assign custom_selected_variant = product.selected_or_first_available_variant %}
         {% if product.selected_variant != nil %}
           {% assign custom_selected_variant = product.selected_variant %}

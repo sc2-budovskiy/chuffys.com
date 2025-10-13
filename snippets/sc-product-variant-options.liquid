@@ -461,6 +461,7 @@
   {% render loop_subscriptions_block %}
 </div>
 
+{% comment %} SC changes 17.09.2025 {% endcomment %}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const loopContainer = document.getElementById('sc-loop');
@@ -512,8 +513,8 @@
           sellingPlans: (variant.selling_plan_allocations || []).map(allocation => ({
             sellingPlanId: allocation.selling_plan_id,
             sellingPlanGroupId: allocation.selling_plan_group_id,
-            name: sellingPlanNames[allocation.selling_plan_id] || null,       // назва плану, наприклад "Deliver every 3 months"
-            groupName: sellingPlanGroupNames[allocation.selling_plan_id] || null, // назва групи (наприклад "Subscribe and Save test")
+            name: sellingPlanNames[allocation.selling_plan_id] || null,       // plan name, for example “Deliver every 3 months”
+            groupName: sellingPlanGroupNames[allocation.selling_plan_id] || null, // group name (e.g., “Subscribe and Save test”)
             price: formatPrice(allocation.price),
             compareAtPrice: allocation.compare_at_price ? formatPrice(allocation.compare_at_price) : null,
             perDeliveryPrice: allocation.per_delivery_price != null ? formatPrice(allocation.per_delivery_price) : null,
