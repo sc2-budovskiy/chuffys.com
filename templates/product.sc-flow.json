@@ -354,6 +354,11 @@
       "name": "Replo Container 1",
       "settings": {}
     },
+    "replo_replo_container_7795_U4Fzh8": {
+      "type": "replo-replo-container-7795",
+      "name": "Replo Container 7795",
+      "settings": {}
+    },
     "image_with_text_3GfmUK": {
       "type": "image-with-text",
       "name": "t:sections.image-with-text.presets.name",
@@ -1705,6 +1710,7 @@
     "replo_replo_container_7787_8YH4MT",
     "replo_replo_container_16_69cQnX",
     "replo_replo_container_1_DpEF9M",
+    "replo_replo_container_7795_U4Fzh8",
     "image_with_text_3GfmUK",
     "ss_glow_testimonial_UJxNMB",
     "custom_columns_fEwY39",
