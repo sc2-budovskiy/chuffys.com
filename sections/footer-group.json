@@ -27,7 +27,7 @@
           "type": "email_signup",
           "settings": {
             "heading": "",
-            "subtext": "<p>Matrix Tech LLC</p><p>Suite 102, 502 Silverside Road</p><p>Wilmington DE 19809 USA</p><p>Phone: (307) 269-9863</p>",
+            "subtext": "<p>Email: info@chuffys.com</p><p>Phone: (307) 269-9863</p>",
             "button_type": "solid",
             "button_label": "Sign up",
             "button_style_secondary": false,
